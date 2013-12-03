@@ -52,10 +52,12 @@
     <label for="avatar" class="control-label"><g:message code="animal.avatar.label" default="Avatar"/></label>
 
     <div class="controls">
-        <input id="fileupload" type="file" name="files[]" data-url="/animal/create"/>
+        <input id="fileupload" type="file" name="files[]" data-url="" />
 
-        <div id="progress">
-            <div class="bar" style="width: 0%;"></div>
+        <div id="progress" class="progress progress-bar-success">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 0%">
+            </div>
         </div>
         <span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>
     </div>
@@ -162,16 +164,10 @@
 </div>
 
 
-<style>
-.bar {
-    height: 18px;
-    background: green;
-}
-</style>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="jQuery-File-Upload-9.5.0/js/vendor/jquery.ui.widget.js"></script>
-<script src="jQuery-File-Upload-9.5.0/js/jquery.iframe-transport.js"></script>
-<script src="jQuery-File-Upload-9.5.0/js/jquery.fileupload.js"></script>
+%{--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--}%
+<script src="../jQuery-File-Upload-9.5.0/js/vendor/jquery.ui.widget.js"></script>
+<script src="../jQuery-File-Upload-9.5.0/js/jquery.iframe-transport.js"></script>
+<script src="../jQuery-File-Upload-9.5.0/js/jquery.fileupload.js"></script>
 <script>
     $(function () {
         $('#fileupload').fileupload({

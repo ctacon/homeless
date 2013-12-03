@@ -7,6 +7,7 @@
     <meta name="layout" content="kickstart"/>
     <g:set var="entityName" value="${message(code: 'animal.label', default: 'Animal')}"/>
     <title><g:message code="default.create.label" args="[entityName]"/></title>
+    <g:javascript library='jquery' />
 </head>
 
 <body>
@@ -32,9 +33,6 @@
     </g:form>
 
 </section>
-
-
-
 
 </body>
 

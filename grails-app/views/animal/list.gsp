@@ -31,14 +31,15 @@
             </div>
         </g:each>
     </div>
+
     <div class="pagination">
-        <bs:paginate total="${animalInstanceTotal}" />
+        <bs:paginate total="${animalInstanceTotal}"/>
         %{--<bs:paginate total="${animalInstanceTotal == null ? animalInstanceList.count() : animalInstanceTotal}"--}%
-                     %{--params="${filterParams}"/>--}%
+        %{--params="${filterParams}"/>--}%
     </div>
 </section>
 %{--<filterpane:filterPane domain="Animal" visible="y" showSortPanel="n" showTitle="n"--}%
-                       %{--associatedProperties="animalInstance.sex"s/>--}%
+%{--associatedProperties="animalInstance.sex"s/>--}%
 </body>
 
 </html>
