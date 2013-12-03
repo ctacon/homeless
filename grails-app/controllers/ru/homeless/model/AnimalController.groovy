@@ -107,12 +107,12 @@ class AnimalController {
         }
     }
 
-    def filter = {
-        if(!params.max) params.max = 10
-        render( view:'list',
-                model:[ animalInstanceList: filterPaneService.filter( params, Animal ),
-                        animalInstanceTotal: filterPaneService.count( params, Animal ),
-                        filterParams: org.grails.plugin.filterpane.FilterPaneUtils.extractFilterParams(params),
-                        params:params ] )
-    }
+//    def filter = {
+//        if(!params.max) params.max = 10
+//        render( view:'list',
+//                model:[ animalInstanceList: filterPaneService.filter( params, Animal ),
+//                        animalInstanceTotal: filterPaneService.count( params, Animal ),
+//                        filterParams: org.grails.plugin.filterpane.FilterPaneUtils.extractFilterParams(params),
+//                        params:params ] )
+//    }
 }
