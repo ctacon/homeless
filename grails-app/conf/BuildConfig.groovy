@@ -41,6 +41,8 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
         mavenRepo "http://repo.spring.io/milestone/"
+        mavenRepo "http://repo.grails.org/grails/libs-releases/"
+        mavenRepo "http://m2repo.spockframework.org/ext/"
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -69,6 +71,7 @@ grails.project.dependency.resolution = {
         compile ":famfamfam:1.0.1"
         compile ":spring-security-ui:1.0-RC1"
         compile ":bootstrap-file-upload:2.1.2"
+        compile ":filterpane:2.3.0"
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.2" // or ":hibernate4:4.1.11.2"

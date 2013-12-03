@@ -166,4 +166,3 @@ grails.plugin.springsecurity.interceptUrlMap = [
         '/**':               ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
-grails.views.default.codec='none'

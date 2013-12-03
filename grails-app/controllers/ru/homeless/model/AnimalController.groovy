@@ -10,6 +10,7 @@ import ru.homeless.model.animal.Animal
 class AnimalController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    def filterPaneService
 
     def index() {
         redirect(action: "list", params: params)
@@ -104,5 +105,14 @@ class AnimalController {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'animal.label', default: 'Animal'), params.id])
             redirect(action: "show", id: params.id)
         }
+    }
+
+    def filter = {
+        if(!params.max) params.max = 10
+        render( view:'list',
+                model:[ animalInstanceList: filterPaneService.filter( params, Animal ),
+                        animalInstanceTotal: filterPaneService.count( params, Animal ),
+                        filterParams: org.grails.plugin.filterpane.FilterPaneUtils.extractFilterParams(params),
+                        params:params ] )
     }
 }

@@ -69,7 +69,8 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'status', 'error')} ">
 				<label for="status" class="control-label"><g:message code="animal.status.label" default="Status" /></label>
 				<div class="controls">
-					
+                    <g:select id="status" name="status.id" from="${ru.homeless.model.animal.AnimalStatus.list()}"
+                              optionKey="id" required="" value="${animalInstance?.status?.id}" class="many-to-one"/>
 					<span class="help-inline">${hasErrors(bean: animalInstance, field: 'status', 'error')}</span>
 				</div>
 			</div>
@@ -77,7 +78,8 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'place', 'error')} ">
 				<label for="place" class="control-label"><g:message code="animal.place.label" default="Place" /></label>
 				<div class="controls">
-					
+                    <g:select id="place" name="place.id" from="${ru.homeless.model.animal.AnimalPlace.list()}"
+                    optionKey="id" required="" value="${animalInstance?.place?.id}" class="many-to-one"/>
 					<span class="help-inline">${hasErrors(bean: animalInstance, field: 'place', 'error')}</span>
 				</div>
 			</div>
@@ -117,7 +119,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'type', 'error')} required">
 				<label for="type" class="control-label"><g:message code="animal.type.label" default="Type" /><span class="required-indicator">*</span></label>
 				<div class="controls">
-					
+                    <g:select id="type" name="type.id" from="${ru.homeless.model.animal.AnimalType.list()}" optionKey="id" required="" value="${animalInstance?.type?.id}" class="many-to-one"/>
 					<span class="help-inline">${hasErrors(bean: animalInstance, field: 'type', 'error')}</span>
 				</div>
 			</div>

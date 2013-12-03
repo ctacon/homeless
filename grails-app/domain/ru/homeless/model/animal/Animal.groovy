@@ -37,7 +37,7 @@ class Animal {
 
     static hasMany = [photos: Photo, comments: Comment]
     static mapping = {
-        version false
+      //  version false
     }
 
     static constraints = {

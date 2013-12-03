@@ -1,4 +1,5 @@
 import ru.homeless.model.PersonPostType
+import ru.homeless.model.Photo
 import ru.homeless.model.animal.*
 
 class BootStrap {
@@ -40,6 +41,8 @@ class BootStrap {
         new AnimalPlace(name: "На улице").save(failOnError: true)
         new AnimalPlace(name: "Дома").save(failOnError: true)
         new AnimalPlace(name: "В подъезде").save(failOnError: true)
+
+       // new Photo(originalFilename:"",newFilename:"",fileSize:)
 
         // new RequestMap(url: "/*", configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
     }
