@@ -48,20 +48,20 @@
 %{--<span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>--}%
 %{--</div>--}%
 %{--</div>--}%
-<div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'avatar', 'error')} ">
-    <label for="avatar" class="control-label"><g:message code="animal.avatar.label" default="Avatar"/></label>
+    <div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'avatar', 'error')} ">
+        <label for="avatar" class="control-label"><g:message code="animal.avatar.label" default="Avatar"/></label>
 
-    <div class="controls">
-        <input id="fileupload" type="file" name="files[]" data-url="" />
+        <div class="controls">
+            <input id="fileupload"  name="avatar.id" type="file" name="files[]" data-url="upload" value=""/>
 
-        <div id="progress" class="progress progress-bar-success">
-            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                 style="width: 0%">
+            <div id="progress" class="progress progress-bar-success">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 0%">
+                </div>
             </div>
+            <span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>
         </div>
-        <span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>
     </div>
-</div>
 
 
 <div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'description', 'error')} ">

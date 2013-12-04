@@ -2,74 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef8acd00-3824-4f32-a666-91b45816a7ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_errors/403.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_errors/403.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_errors/404.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_errors/404.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_errors/503.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_errors/503.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/Animal.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/Animal.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/AnimalType.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/AnimalType.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/AnimalController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/AnimalController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_admin.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_admin.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_common/modals/_deleteDialog.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_common/modals/_deleteDialog.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_common/modals/_deleteSymbolLink.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_common/modals/_deleteSymbolLink.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_common/modals/_deleteTextLink.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_common/modals/_deleteTextLink.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_common/buttons/_editSymbolLink.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_common/buttons/_editSymbolLink.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_DemoPage/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_DemoPage/_form.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/photo/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/photo/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_info.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_info.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_language.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_language.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_common/modals/_registerDialog.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_common/modals/_registerDialog.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_common/modals/_registerTextLink.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_common/modals/_registerTextLink.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_common/buttons/_showSymbolLink.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_common/buttons/_showSymbolLink.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/siteinfo/about.gsp" afterPath="$PROJECT_DIR$/grails-app/views/siteinfo/about.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/auth.spring.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/auth.spring.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/siteinfo/contact.gsp" afterPath="$PROJECT_DIR$/grails-app/views/siteinfo/contact.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_DemoPage/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_DemoPage/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/photo/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/photo/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/denied.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/denied.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_DemoPage/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_DemoPage/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/photo/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/photo/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_errors/error.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_errors/error.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/forgotPassword.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/forgotPassword.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/forgotPassword.spring.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/forgotPassword.spring.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/photo/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/photo/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/index.spring.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/index.spring.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_DemoPage/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_DemoPage/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/photo/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/photo/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/nextSteps.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/nextSteps.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/resetPassword.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/resetPassword.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/resetPassword.spring.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/resetPassword.spring.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/spring/resources.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/spring/resources.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_DemoPage/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_DemoPage/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/photo/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/photo/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/siteinfo/systeminfo.gsp" afterPath="$PROJECT_DIR$/grails-app/views/siteinfo/systeminfo.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeless-grailsPlugins.iml" afterPath="$PROJECT_DIR$/homeless-grailsPlugins.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="homeless.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386080575396" ignored="false" />
+    <file path="/Dummy.txt" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386091445543" ignored="false" />
     <file path="/a.dummy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385884531157" ignored="false" />
     <file path="/kickstart.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384796194156" ignored="false" />
     <file path="/LoginController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384265945688" ignored="false" />
@@ -85,7 +27,7 @@
     <file path="/_content.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384796710877" ignored="false" />
     <file path="/index.spring.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384668499580" ignored="false" />
     <file path="/resetPassword.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384674072265" ignored="false" />
-    <file path="/fragment.java" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385885211488" ignored="false" />
+    <file path="/fragment.java" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386165208171" ignored="false" />
     <file path="$PROJECT_DIR$/target/work/plugins/scaffolding-2.0.1/src/templates/scaffolding/AsyncSpec.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384955921697" ignored="false" />
     <file path="$PROJECT_DIR$/target/work/plugins/scaffolding-2.0.1/src/templates/scaffolding/Spec.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384955921697" ignored="false" />
     <file path="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/controllers/grails/plugin/springsecurity/ui/UserController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384955921697" ignored="false" />
@@ -105,9 +47,9 @@
     <file path="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/controllers/grails/plugin/springsecurity/ui/AclClassController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384955921698" ignored="false" />
     <file path="/Picture.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384957179671" ignored="false" />
     <file path="/Animal.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385886351032" ignored="false" />
-    <file path="/AnimalController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385899223225" ignored="false" />
+    <file path="/AnimalController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386168807824" ignored="false" />
     <file path="/Photo.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385284540822" ignored="false" />
-    <file path="/_form.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386090860806" ignored="false" />
+    <file path="/_form.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386168459736" ignored="false" />
     <file path="/edit.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385038037418" ignored="false" />
     <file path="/ImageController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385055200017" ignored="false" />
     <file path="/BuildConfig.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385050573193" ignored="false" />
@@ -127,6 +69,8 @@
     <file path="/list.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385901256181" ignored="false" />
     <file path="/main.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385889961472" ignored="false" />
     <file path="/nextSteps.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385890989057" ignored="false" />
+    <file path="$PROJECT_DIR$/test/unit/homeless/PhotoServiceSpec.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386165216373" ignored="false" />
+    <file path="/PhotoService.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386165432487" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,16 +145,27 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="336" selection-end="345" vertical-scroll-proportion="-0.3">
+            <state line="23" column="7" selection-start="470" selection-end="470" vertical-scroll-proportion="-3.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.gsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AnimalController.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/AnimalController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="124" column="139" selection-start="4364" selection-end="4364" vertical-scroll-proportion="0.53977275">
+              <folding>
+                <element signature="e#27#89#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/animal/_form.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="136" selection-start="2958" selection-end="2958" vertical-scroll-proportion="0.48065174">
+            <state line="46" column="119" selection-start="2542" selection-end="2542" vertical-scroll-proportion="-4.06383">
               <folding />
             </state>
           </provider>
@@ -244,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/AmimalPlace.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/AnimalCharacter.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/AnimalHair.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/AnimalSex.groovy" />
@@ -255,11 +209,12 @@
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/home/nextSteps.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/AnimalController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/animal/list.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/animal/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/services/ru/homeless/model/PhotoService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/animal/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/AnimalController.groovy" />
       </list>
     </option>
   </component>
@@ -382,6 +337,7 @@
       <recent name="$PROJECT_DIR$/grails-app/views/login" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.homeless.model" />
       <recent name="ru.homeless.model.animal" />
       <recent name="ru.homeless.security" />
     </key>
@@ -630,7 +586,11 @@
       <created>1386080579668</created>
       <updated>1386080579668</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1">
+      <created>1386091687459</created>
+      <updated>1386091687459</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -801,51 +761,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="90" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.8820327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/animal/list.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.4642857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/Animal.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="336" selection-end="345" vertical-scroll-proportion="-0.3">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/animal/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.029761905">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/animal/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27494907">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="49" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.62618595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="40" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.740038">
@@ -902,6 +817,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/ru/homeless/model/PhotoService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="18" selection-start="610" selection-end="610" vertical-scroll-proportion="0.3430127">
+          <folding>
+            <element signature="e#27#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/programming/development/lib/imgscalr-lib-4.2-sources.jar!/org/imgscalr/Scalr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="13" selection-start="10579" selection-end="10579" vertical-scroll-proportion="0.33271375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/PhotoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="23" selection-start="80" selection-end="80" vertical-scroll-proportion="-5.0795455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="31" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.7785844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/Animal.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="7" selection-start="470" selection-end="470" vertical-scroll-proportion="-3.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/animal/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="373" selection-end="410" vertical-scroll-proportion="-2.8723404">
@@ -911,8 +866,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/animal/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="136" selection-start="2958" selection-end="2958" vertical-scroll-proportion="0.48065174">
+        <state line="46" column="119" selection-start="2542" selection-end="2542" vertical-scroll-proportion="-4.06383">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/AnimalController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="139" selection-start="4364" selection-end="4364" vertical-scroll-proportion="0.53977275">
+          <folding>
+            <element signature="e#27#89#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -923,8 +887,8 @@
         <entry key="homeless">
           <value>
             <GrailsSettings>
-              <option name="buildConfigCrc" value="1717018910" />
-              <option name="pluginDependenciesCrc" value="-1505450872" />
+              <option name="buildConfigCrc" value="1412576366" />
+              <option name="pluginDependenciesCrc" value="1472135351" />
               <option name="properties">
                 <map>
                   <entry key="grails.global.plugins.dir" value="$USER_HOME$/.grails/2.3.1/global-plugins" />
@@ -996,7 +960,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>homeless</last-edited>
+          <last-edited>GrailsWeb|homeless</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

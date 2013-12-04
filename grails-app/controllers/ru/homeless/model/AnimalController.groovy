@@ -1,7 +1,14 @@
 package ru.homeless.model
 
 import org.springframework.dao.DataIntegrityViolationException
+
+//import org.imgscalr.Scalr
+import org.springframework.web.multipart.MultipartFile
+import org.springframework.web.multipart.MultipartHttpServletRequest
 import ru.homeless.model.animal.Animal
+
+import javax.imageio.ImageIO
+import java.awt.image.BufferedImage
 
 /**
  * AnimalController
@@ -10,7 +17,7 @@ import ru.homeless.model.animal.Animal
 class AnimalController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-    def filterPaneService
+
 
     def index() {
         redirect(action: "list", params: params)
@@ -105,6 +112,67 @@ class AnimalController {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'animal.label', default: 'Animal'), params.id])
             redirect(action: "show", id: params.id)
         }
+    }
+
+
+
+
+
+
+    def upload() {
+        def animalInstance = Animal.get(params.id)
+        if (!animalInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'animal.label', default: 'Animal'), params.id])
+            return
+        }
+        if (request instanceof MultipartHttpServletRequest) {
+            for (filename in request.getFileNames()) {
+                MultipartFile file = request.getFile(filename)
+
+                String newFilenameBase = UUID.randomUUID().toString()
+                String originalFileExtension = file.originalFilename.substring(file.originalFilename.lastIndexOf("."))
+                String newFilename = newFilenameBase + originalFileExtension
+                String storageDirectory = grailsApplication.config.file.upload.directory ?: '/tmp'
+
+                File newFile = new File("$storageDirectory/$newFilename")
+                file.transferTo(newFile)
+
+//                        BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile), 290);
+                BufferedImage thumbnail = ImageIO.read(newFile);
+                String thumbnailFilename = newFilenameBase + '-thumbnail.png'
+                File thumbnailFile = new File("$storageDirectory/$thumbnailFilename")
+                ImageIO.write(thumbnail, 'png', thumbnailFile)
+
+                Photo picture = new Photo(
+                        originalFilename: file.originalFilename,
+                        thumbnailFilename: thumbnailFilename,
+                        newFilename: newFilename,
+                        fileSize: file.size
+                ).save()
+
+                animalInstance.avatar = picture
+                [animalInstance: animalInstance]
+            }
+        }
+
+    }
+
+
+
+    def picture() {
+        def pic = Photo.get(params.id)
+        File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.newFilename}")
+        response.contentType = 'image/jpeg'
+        response.outputStream << new FileInputStream(picFile)
+        response.outputStream.flush()
+    }
+
+    def thumbnail() {
+        def pic = Photo.get(params.id)
+        File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.thumbnailFilename}")
+        response.contentType = 'image/png'
+        response.outputStream << new FileInputStream(picFile)
+        response.outputStream.flush()
     }
 
 //    def filter = {
