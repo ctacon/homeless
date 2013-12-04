@@ -1,5 +1,4 @@
 <%@ page import="ru.homeless.model.animal.Animal" %>
-
 <div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'name', 'error')} required"
      xmlns="http://www.w3.org/1999/html">
     <label for="name" class="control-label"><g:message code="animal.name.label" default="Name"/><span
@@ -48,20 +47,21 @@
 %{--<span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>--}%
 %{--</div>--}%
 %{--</div>--}%
-    <div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'avatar', 'error')} ">
-        <label for="avatar" class="control-label"><g:message code="animal.avatar.label" default="Avatar"/></label>
+<g:hiddenField id="avatar" name="avatar.id"/>
+<div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'avatar', 'error')} ">
+    <label for="avatar" class="control-label"><g:message code="animal.avatar.label" default="Avatar"/></label>
 
-        <div class="controls">
-            <input id="fileupload"  name="avatar.id" type="file" name="files[]" data-url="upload" value=""/>
+    <div class="controls">
+        <input id="fileupload" type="file" name="files[]" data-url="upload"/>
 
-            <div id="progress" class="progress progress-bar-success">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                     style="width: 0%">
-                </div>
+        <div id="progress" class="progress progress-bar-success">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 0%">
             </div>
-            <span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>
         </div>
+        <span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>
     </div>
+</div>
 
 
 <div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'description', 'error')} ">
@@ -177,9 +177,10 @@
                 data.submit();
             },
             done: function (e, data) {
-                $.each(data.result.files, function (index, file) {
-                    $('<p/>').text(file.name).appendTo(document.body);
-                });
+//                $.each(data.result.files, function (index, file) {
+                   $('<p/>').text(data.name).appendTo(document.body);
+//                $('#avatar').val(data.avatarid)
+//                });
             },
             progressall: function (e, data) {
                 var progress = parseInt(data.loaded / data.total * 100, 10);

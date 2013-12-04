@@ -19,9 +19,6 @@
           <root url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/views" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.10.2.2/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/joda-time-1.4/grails-app/views" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/filterpane-2.3.0/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/filterpane-2.3.0/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -52,21 +49,11 @@
     <content url="file://$MODULE_DIR$/target/work/plugins/famfamfam-1.0.1">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/famfamfam-1.0.1/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/target/work/plugins/filterpane-2.3.0">
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/filterpane-2.3.0/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/filterpane-2.3.0/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/filterpane-2.3.0/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/filterpane-2.3.0/grails-app/taglib" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/font-awesome-resources-3.0" />
     <content url="file://$MODULE_DIR$/target/work/plugins/hibernate-3.6.10.2">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/hibernate-3.6.10.2/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/hibernate-3.6.10.2/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/hibernate-3.6.10.2/grails-app/i18n" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/target/work/plugins/joda-time-1.4">
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/joda-time-1.4/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/joda-time-1.4/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/jquery-1.10.2.2">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/jquery-1.10.2.2/src/groovy" isTestSource="false" />
@@ -161,11 +148,9 @@
           <root url="jar://$MAVEN_REPOSITORY$/javax/mail/mail/1.4.3/mail-1.4.3.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/3.2.0.RC1/spring-security-web-3.2.0.RC1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.2.0.RC1/spring-security-core-3.2.0.RC1.jar!/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/joda-time-1.4/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/target/work/plugins/joda-time-1.4/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>

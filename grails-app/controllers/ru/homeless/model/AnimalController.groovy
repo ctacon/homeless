@@ -1,9 +1,10 @@
 package ru.homeless.model
 
+import grails.converters.JSON
 import org.springframework.dao.DataIntegrityViolationException
+import org.springframework.web.multipart.MultipartFile
 
 //import org.imgscalr.Scalr
-import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.multipart.MultipartHttpServletRequest
 import ru.homeless.model.animal.Animal
 
@@ -120,11 +121,7 @@ class AnimalController {
 
 
     def upload() {
-        def animalInstance = Animal.get(params.id)
-        if (!animalInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'animal.label', default: 'Animal'), params.id])
-            return
-        }
+        def results = []
         if (request instanceof MultipartHttpServletRequest) {
             for (filename in request.getFileNames()) {
                 MultipartFile file = request.getFile(filename)
@@ -150,10 +147,15 @@ class AnimalController {
                         fileSize: file.size
                 ).save()
 
-                animalInstance.avatar = picture
-                [animalInstance: animalInstance]
+                results << [
+                        avatarid : picture.id,
+                        name: picture.originalFilename,
+                        size: picture.fileSize
+                ]
+
             }
         }
+        render results as JSON
 
     }
 
