@@ -1,10 +1,8 @@
 package ru.homeless.model
 
-import grails.converters.JSON
+import org.imgscalr.Scalr
 import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.web.multipart.MultipartFile
-
-//import org.imgscalr.Scalr
 import org.springframework.web.multipart.MultipartHttpServletRequest
 import ru.homeless.model.animal.Animal
 
@@ -134,8 +132,7 @@ class AnimalController {
                 File newFile = new File("$storageDirectory/$newFilename")
                 file.transferTo(newFile)
 
-//                        BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile), 290);
-                BufferedImage thumbnail = ImageIO.read(newFile);
+                BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile), 150,150);
                 String thumbnailFilename = newFilenameBase + '-thumbnail.png'
                 File thumbnailFile = new File("$storageDirectory/$thumbnailFilename")
                 ImageIO.write(thumbnail, 'png', thumbnailFile)
@@ -148,14 +145,16 @@ class AnimalController {
                 ).save()
 
                 results << [
-                        avatarid : picture.id,
+                        avatarid: picture.id,
                         name: picture.originalFilename,
+                        thumbnail_url: createLink(controller: 'Photo', action: 'thumbnail', id: picture.id),
                         size: picture.fileSize
                 ]
 
             }
         }
-        render results as JSON
+        println "results : " + results
+        render(contentType: 'text/json') { ['files': results] }
 
     }
 

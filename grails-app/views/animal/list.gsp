@@ -6,7 +6,6 @@
     <meta name="layout" content="kickstart"/>
     <g:set var="entityName" value="${message(code: 'animal.label', default: 'Animal')}"/>
     <title><g:message code="default.list.label" args="[entityName]"/></title>
-    <r:require module="filterpane"/>
 </head>
 
 <body>

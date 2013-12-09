@@ -10,6 +10,7 @@ class Photo {
 //	Long	id
 //	Long	version
     String originalFilename
+    String thumbnailFilename
     String newFilename
     long fileSize
 

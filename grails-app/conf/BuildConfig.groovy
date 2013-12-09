@@ -64,7 +64,6 @@ grails.project.dependency.resolution = {
         compile ":kickstart-with-bootstrap:0.9.6"
         compile ':lesscss-resources:1.3.0.3'
         compile ":twitter-bootstrap:3.0.2"
-        // compile ":spring-security-core:1.2.7.3"
         compile ":spring-security-core:2.0-RC2"
         compile ":mail:1.0.1"
         compile ":jquery-ui:1.10.3"

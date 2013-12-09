@@ -1,7 +1,7 @@
 package ru.homeless.model
 
 import grails.converters.JSON
-import org.imgscalr.Scalr
+//import org.imgscalr.Scalr
 import org.springframework.http.HttpStatus
 import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.multipart.MultipartHttpServletRequest
@@ -112,64 +112,64 @@ class PhotoController {
 //        }
 //    }
 
-    def upload() {
-        switch (request.method) {
-            case "GET":
-                def results = []
-                Photo.findAll().each { Photo picture ->
-                    results << [
-                            name: picture.originalFilename,
-                            size: picture.fileSize,
-                            url: createLink(controller: 'Photo', action: 'picture', id: picture.id),
-                            thumbnail_url: createLink(controller: 'Photo', action: 'thumbnail', id: picture.id),
-                            delete_url: createLink(controller: 'Photo', action: 'delete', id: picture.id),
-                            delete_type: "DELETE"
-                    ]
-                }
-                render results as JSON
-                break;
-            case "POST":
-                def results = []
-                if (request instanceof MultipartHttpServletRequest) {
-                    for (filename in request.getFileNames()) {
-                        MultipartFile file = request.getFile(filename)
-
-                        String newFilenameBase = UUID.randomUUID().toString()
-                        String originalFileExtension = file.originalFilename.substring(file.originalFilename.lastIndexOf("."))
-                        String newFilename = newFilenameBase + originalFileExtension
-                        String storageDirectory = grailsApplication.config.file.upload.directory ?: '/tmp'
-
-                        File newFile = new File("$storageDirectory/$newFilename")
-                        file.transferTo(newFile)
-
-                        BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile), 290);
-                        String thumbnailFilename = newFilenameBase + '-thumbnail.png'
-                        File thumbnailFile = new File("$storageDirectory/$thumbnailFilename")
-                        ImageIO.write(thumbnail, 'png', thumbnailFile)
-
-                        Photo picture = new Photo(
-                                originalFilename: file.originalFilename,
-                                thumbnailFilename: thumbnailFilename,
-                                newFilename: newFilename,
-                                fileSize: file.size
-                        ).save()
-
-                        results << [
-                                name: picture.originalFilename,
-                                size: picture.fileSize,
-                                url: createLink(controller: 'Photo', action: 'picture', id: picture.id),
-                                thumbnail_url: createLink(controller: 'Photo', action: 'thumbnail', id: picture.id),
-                                delete_url: createLink(controller: 'Photo', action: 'delete', id: picture.id),
-                                delete_type: "DELETE"
-                        ]
-                    }
-                }
-
-                render results as JSON
-                break;
-            default: render status: HttpStatus.METHOD_NOT_ALLOWED.value()
-        }
-    }
+//    def upload() {
+//        switch (request.method) {
+//            case "GET":
+//                def results = []
+//                Photo.findAll().each { Photo picture ->
+//                    results << [
+//                            name: picture.originalFilename,
+//                            size: picture.fileSize,
+//                            url: createLink(controller: 'Photo', action: 'picture', id: picture.id),
+//                            thumbnail_url: createLink(controller: 'Photo', action: 'thumbnail', id: picture.id),
+//                            delete_url: createLink(controller: 'Photo', action: 'delete', id: picture.id),
+//                            delete_type: "DELETE"
+//                    ]
+//                }
+//                render results as JSON
+//                break;
+//            case "POST":
+//                def results = []
+//                if (request instanceof MultipartHttpServletRequest) {
+//                    for (filename in request.getFileNames()) {
+//                        MultipartFile file = request.getFile(filename)
+//
+//                        String newFilenameBase = UUID.randomUUID().toString()
+//                        String originalFileExtension = file.originalFilename.substring(file.originalFilename.lastIndexOf("."))
+//                        String newFilename = newFilenameBase + originalFileExtension
+//                        String storageDirectory = grailsApplication.config.file.upload.directory ?: '/tmp'
+//
+//                        File newFile = new File("$storageDirectory/$newFilename")
+//                        file.transferTo(newFile)
+//
+//                        BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile), 290);
+//                        String thumbnailFilename = newFilenameBase + '-thumbnail.png'
+//                        File thumbnailFile = new File("$storageDirectory/$thumbnailFilename")
+//                        ImageIO.write(thumbnail, 'png', thumbnailFile)
+//
+//                        Photo picture = new Photo(
+//                                originalFilename: file.originalFilename,
+//                                thumbnailFilename: thumbnailFilename,
+//                                newFilename: newFilename,
+//                                fileSize: file.size
+//                        ).save()
+//
+//                        results << [
+//                                name: picture.originalFilename,
+//                                size: picture.fileSize,
+//                                url: createLink(controller: 'Photo', action: 'picture', id: picture.id),
+//                                thumbnail_url: createLink(controller: 'Photo', action: 'thumbnail', id: picture.id),
+//                                delete_url: createLink(controller: 'Photo', action: 'delete', id: picture.id),
+//                                delete_type: "DELETE"
+//                        ]
+//                    }
+//                }
+//
+//                render results as JSON
+//                break;
+//            default: render status: HttpStatus.METHOD_NOT_ALLOWED.value()
+//        }
+//    }
 
     def photo() {
         render ""
@@ -189,10 +189,14 @@ class PhotoController {
 
     def thumbnail() {
         def pic = Photo.get(params.id)
-        File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.thumbnailFilename}")
-        response.contentType = 'image/png'
-        response.outputStream << new FileInputStream(picFile)
-        response.outputStream.flush()
+        if (pic != null) {
+            File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.thumbnailFilename}")
+            response.contentType = 'image/png'
+            response.outputStream << new FileInputStream(picFile)
+            response.outputStream.flush()
+        } else {
+            log.error("Не найдена фотография ид = " + params.id);
+        }
     }
 
     def delete() {
