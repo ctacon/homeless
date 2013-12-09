@@ -90,7 +90,8 @@
 
 
     <div class="controls">
-        <input id="albumfileupload" type="file" name="files1[]" data-url="upload" autoUpload="true" multiple="true"/>
+        <input id="albumfileupload" type="file" name="files1[]" data-url="upload" autoUpload="true" multiple="true"
+               replaceFileInput="false"/>
         %{--<g:select name="photos" from="${ru.homeless.model.Photo.list()}" multiple="multiple" optionKey="id"--}%
         %{--size="5"--}%
         %{--value="${animalInstance?.photos*.id}" class="many-to-many"/>--}%
@@ -222,10 +223,10 @@
                 data.submit();
             },
             done: function (e, data) {
-                var ph = $('photos').value;
+                var ph = $('#photos').val();
                 $.each(data.result.files, function (index, file) {
                     $('<p/>').text(file.name).appendTo(document.body);
-                    ph = ( ph == null ? '' : (ph + ',')) + file.avatarid;
+                    ph = ( ph ? '' : (ph + ',')) + file.avatarid;
 //                    $("#avatarthumbnail").attr("src", file.thumbnail_url);
                 });
                 $('#photos').val(ph);
