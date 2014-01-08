@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="application/json"/>
-    <meta name="layout" content="kickstart"/>
+    <meta name="layout" content="homeless_layout"/>
     <g:set var="entityName" value="${message(code: 'photos.label', default: 'Photo')}"/>
     <title><g:message code="default.create.label" args="[entityName]"/></title>
     <r:require modules="bootstrap-file-upload"/>

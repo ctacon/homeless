@@ -14,7 +14,7 @@ class Comment {
     Person person
 
     /* Automatic timestamping of GORM */
-//	Date	dateCreated
+    Date dateCreated
 //	Date	lastUpdated
 
 //	static belongsTo	= []	// tells GORM to cascade commands: e.g., delete this object if the "parent" is deleted.
@@ -30,6 +30,11 @@ class Comment {
         person nullable: false
         childComments nullable: true
         parent nullable: true
+        text blank: false
+    }
+
+    public Collection<Comment> getChildCommentsSorted() {
+        return childComments?.sort { it.dateCreated }
     }
 
     /*

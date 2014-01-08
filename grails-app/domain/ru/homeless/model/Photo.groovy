@@ -13,6 +13,7 @@ class Photo {
     String thumbnailFilename
     String newFilename
     long fileSize
+    boolean deleted
 
     /* Automatic timestamping of GORM */
 //	Date	dateCreated
@@ -28,6 +29,7 @@ class Photo {
     static hasMany = [comments: Comment]
     static mapping = {
     }
+    //static transients = [ 'deleted' ]
 
     static constraints = {
         comments nullable: true
@@ -36,8 +38,21 @@ class Photo {
     /*
      * Methods of the Domain Class
      */
+
 //	@Override	// Override toString for a nicer / more descriptive UI 
 //	public String toString() {
 //		return "${name}";
 //	}
+    @Override
+    public java.lang.String toString() {
+        return "Photo{" +
+                "id=" + id +
+                ", originalFilename='" + originalFilename + '\'' +
+                ", thumbnailFilename='" + thumbnailFilename + '\'' +
+                ", newFilename='" + newFilename + '\'' +
+                ", fileSize=" + fileSize +
+                ", deleted=" + deleted +
+                ", version=" + version +
+                '}';
+    }
 }

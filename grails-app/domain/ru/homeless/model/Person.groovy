@@ -7,6 +7,7 @@ import ru.homeless.security.User
  * A domain class describes the data object and it's mapping to the database
  */
 class Person extends User {
+    Photo avatar
 
     /* Default (injected) attributes of GORM */
 //	Long	id
@@ -25,6 +26,7 @@ class Person extends User {
     }
 
     static constraints = {
+        avatar nullable: true
     }
 
     /*

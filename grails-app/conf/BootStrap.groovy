@@ -6,15 +6,19 @@ class BootStrap {
     def init = { servletContext ->
         //пользователи роли
         def adminRole = ru.homeless.security.Role.findByAuthority('ROLE_ADMIN') ?: new ru.homeless.security.Role(authority: 'ROLE_ADMIN').save(failOnError: true)
+        def superAdminRole = ru.homeless.security.Role.findByAuthority('ROLE_SUPER_ADMIN') ?: new ru.homeless.security.Role(authority: 'ROLE_SUPER_ADMIN').save(failOnError: true)
         def userRole = ru.homeless.security.Role.findByAuthority('ROLE_USER') ?: new ru.homeless.security.Role(authority: 'ROLE_USER').save(failOnError: true)
-        def adminUser = ru.homeless.security.User.findByUsername('admin') ?: new ru.homeless.security.User(
+        def superAdminUser = ru.homeless.model.Person.findByUsername('admin') ?: new ru.homeless.model.Person(
                 username: 'admin',
                 password: 'admin',
                 email: 'ctacon183@gmail.com',
                 enabled: true).save(failOnError: true)
 
-        if (!adminUser.authorities.contains(adminRole)) {
-            ru.homeless.security.UserRole.create adminUser, adminRole
+        if (!superAdminUser.authorities.contains(adminRole)) {
+            ru.homeless.security.UserRole.create superAdminUser, adminRole
+        }
+        if(!superAdminUser.authorities.contains(superAdminRole)){
+            ru.homeless.security.UserRole.create superAdminUser, superAdminRole
         }
 
         //Вспомогательные таблицы

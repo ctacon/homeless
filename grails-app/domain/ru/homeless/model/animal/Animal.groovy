@@ -42,7 +42,7 @@ class Animal {
 
     static constraints = {
         name blank: false, maxSize: 50
-        age max: 12 * 30
+        age max: 12 * 30, min: 0
         color blank: true, nullable: true
         character nullable: true
         avatar nullable: true
@@ -53,7 +53,7 @@ class Animal {
         place nullable: true
     }
 
-    /*
+/*
      * Methods of the Domain Class
      */
 //	@Override	// Override toString for a nicer / more descriptive UI 

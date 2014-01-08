@@ -143,11 +143,15 @@ grails.plugin.springsecurity.authority.className = 'ru.homeless.security.Role'
 //grails.plugin.springsecurity.ui.register.emailBody = '...'
 //grails.plugin.springsecurity.ui.register.emailFrom = '...'
 //grails.plugin.springsecurity.ui.register.emailSubject = '...'
+//grails.plugin.springsecurity.ui.forgotPassword.emailBody = '...'
+//grails.plugin.springsecurity.ui.forgotPassword.emailFrom = '...'
+//grails.plugin.springsecurity.ui.forgotPassword.emailSubject = '...'
 grails.plugin.springsecurity.ui.password.minLength = 4
 grails.plugin.springsecurity.ui.password.maxLength = 64
-grails.plugin.springsecurity.ui.password.validationRegex = '^.*(?=.*\\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&]).*$'
+grails.plugin.springsecurity.ui.password.validationRegex = '^.*$'
 
 grails.plugin.springsecurity.ui.register.postRegisterUrl = '/'
+grails.plugin.springsecurity.ui.register.postResetUrl = '/'
 
 //grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/'
 //grails.plugin.springsecurity.auth.loginFormUrl = '/'
@@ -160,6 +164,7 @@ grails.plugin.springsecurity.interceptUrlMap = [
         '/person/*': ['IS_AUTHENTICATED_REMEMBERED'],
         '/post/followAjax': ['ROLE_USER'],
         '/post/addPostAjax': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
+      //  '/animal/create': ['ROLE_USER'],
         '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 

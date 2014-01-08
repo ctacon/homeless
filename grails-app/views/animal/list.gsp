@@ -3,42 +3,47 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
+    <meta name="layout" content="homeless_layout"/>
     <g:set var="entityName" value="${message(code: 'animal.label', default: 'Animal')}"/>
     <title><g:message code="default.list.label" args="[entityName]"/></title>
 </head>
 
 <body>
-
 <section id="list-animal" class="first">
-    <div class="row">
+    <sec:ifLoggedIn>
+        <g:link class="btn btn-primary" action="create"><g:message code="default.new.label"
+                                           args="[entityName]"/></g:link>
+    </sec:ifLoggedIn>
+    <ul class="thumbnails">
         <g:each in="${animalInstanceList}" status="i" var="animalInstance">
-            <div class="col-sm-6 col-md-4">
+
+            <li class="span2">
                 <div class="thumbnail">
-                    <g:link action="show" id="${animalInstance.id}">${fieldValue(bean: animalInstance, field: "name")}
-                        <img data-src="holder.js/200x200" alt="100%x180"
-                             style="height: 180px; width: 100%; display: block;"
+                    <g:link action="show" id="${animalInstance.id}">
+                        <img data-src="holder.js/150%x150" alt=""
                              src="${animalInstance.avatar ?
                                  createLink(controller: 'Photo', action: 'thumbnail', id: animalInstance.avatar.id)
-                             : resource(dir: 'images', file: 'cat.jpeg')}">
+                             : resource(dir: 'images', file: 'cat.jpg')}">
 
-                        <div class="caption">
-                            <p>${animalInstance.description}</p>
-                        </div>
                     </g:link>
+                    <div class="caption">
+                        <h6 class="text-center">${fieldValue(bean: animalInstance, field: "name")}</h6>
+
+                        <p>${animalInstance.description}</p>
+                    </div>
                 </div>
-            </div>
+            </li>
+
         </g:each>
-    </div>
+    </ul>
+
 
     <div class="pagination">
-        <bs:paginate total="${animalInstanceTotal}"/>
-        %{--<bs:paginate total="${animalInstanceTotal == null ? animalInstanceList.count() : animalInstanceTotal}"--}%
-        %{--params="${filterParams}"/>--}%
+        <bs:paginate total="${animalInstanceTotal}"
+        next="Вперед"
+        prev="Назад"/>
     </div>
 </section>
-%{--<filterpane:filterPane domain="Animal" visible="y" showSortPanel="n" showTitle="n"--}%
-%{--associatedProperties="animalInstance.sex"s/>--}%
 </body>
 
 </html>

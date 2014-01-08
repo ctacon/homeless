@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
+    <meta name="layout" content="homeless_layout"/>
     <g:set var="entityName" value="${message(code: 'photos.label', default: 'Photo')}"/>
     <title><g:message code="default.edit.label" args="[entityName]"/></title>
 </head>

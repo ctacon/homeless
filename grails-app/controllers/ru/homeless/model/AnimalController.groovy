@@ -85,7 +85,14 @@ class AnimalController {
 
         animalInstance.properties = params
 
-        if (!animalInstance.save(flush: true)) {
+        def _toBeDeleted = animalInstance.photos.findAll { (it?.deleted || (it == null)) }
+        log.info("photos = " + animalInstance.photos)
+        log.info("_toBeDeleted = " + _toBeDeleted.size())
+        if (_toBeDeleted) {
+            animalInstance.photos.removeAll(_toBeDeleted)
+        }
+
+        if (!animalInstance.hasErrors() && !animalInstance.save(flush: true)) {
             render(view: "edit", model: [animalInstance: animalInstance])
             return
         }
@@ -132,7 +139,7 @@ class AnimalController {
                 File newFile = new File("$storageDirectory/$newFilename")
                 file.transferTo(newFile)
 
-                BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile), 150,150);
+                BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile),Scalr.Mode.FIT_EXACT , 150, 150);
                 String thumbnailFilename = newFilenameBase + '-thumbnail.png'
                 File thumbnailFile = new File("$storageDirectory/$thumbnailFilename")
                 ImageIO.write(thumbnail, 'png', thumbnailFile)
@@ -148,6 +155,7 @@ class AnimalController {
                         avatarid: picture.id,
                         name: picture.originalFilename,
                         thumbnail_url: createLink(controller: 'Photo', action: 'thumbnail', id: picture.id),
+                        url: createLink(controller: 'Photo', action: 'picture', id: picture.id),
                         size: picture.fileSize
                 ]
 
@@ -159,29 +167,4 @@ class AnimalController {
     }
 
 
-
-    def picture() {
-        def pic = Photo.get(params.id)
-        File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.newFilename}")
-        response.contentType = 'image/jpeg'
-        response.outputStream << new FileInputStream(picFile)
-        response.outputStream.flush()
-    }
-
-    def thumbnail() {
-        def pic = Photo.get(params.id)
-        File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.thumbnailFilename}")
-        response.contentType = 'image/png'
-        response.outputStream << new FileInputStream(picFile)
-        response.outputStream.flush()
-    }
-
-//    def filter = {
-//        if(!params.max) params.max = 10
-//        render( view:'list',
-//                model:[ animalInstanceList: filterPaneService.filter( params, Animal ),
-//                        animalInstanceTotal: filterPaneService.count( params, Animal ),
-//                        filterParams: org.grails.plugin.filterpane.FilterPaneUtils.extractFilterParams(params),
-//                        params:params ] )
-//    }
 }

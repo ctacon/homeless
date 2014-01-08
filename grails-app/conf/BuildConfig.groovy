@@ -70,7 +70,7 @@ grails.project.dependency.resolution = {
         compile ":famfamfam:1.0.1"
         compile ":spring-security-ui:1.0-RC1"
         compile ":bootstrap-file-upload:2.1.2"
-        //compile ":filterpane:2.3.0"
+
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.2" // or ":hibernate4:4.1.11.2"

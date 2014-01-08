@@ -2,7 +2,7 @@
 
 <head>
     <title><g:message code='spring.security.ui.resetPassword.title'/></title>
-    <meta name="layout" content="kickstart"/>
+    <meta name="layout" content="homeless_layout"/>
     <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
 </head>
 

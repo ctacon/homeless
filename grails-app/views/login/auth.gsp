@@ -1,10 +1,7 @@
 <html>
 <head>
     <title><g:message code="springSecurity.login.title"/></title>
-    <meta name="layout" content="kickstart"/>
-
-    <%--g:set var="layout_nomainmenu"		value="${true}" scope="request"/--%>
-    <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
+    <meta name="layout" content="homeless_layout"/>
 </head>
 
 <body>
@@ -41,9 +38,12 @@
                 <div class="controls">
                     <input type='submit' id="submit" class="btn btn-success"
                            value='${message(code: "springSecurity.login.button")}'/>
-                    <s2ui:linkButton elementId='register' controller='register'
+                    <s2ui:linkButton
+                            class="btn btn-inverse"
+                            elementId='register' controller='register'
                                      messageCode='spring.security.ui.login.register'/>
-                    <g:link controller='register' action='forgotPassword'><g:message
+                    <g:link class="btn btn-danger"
+                            controller='register' action='forgotPassword'><g:message
                             code='spring.security.ui.login.forgotPassword'/></g:link>
                 </div>
 

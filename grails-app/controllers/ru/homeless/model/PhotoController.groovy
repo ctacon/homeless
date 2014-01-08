@@ -171,13 +171,9 @@ class PhotoController {
 //        }
 //    }
 
-    def photo() {
-        render ""
-    }
 
-    def image() {
-        render ""
-    }
+
+
 
     def picture() {
         def pic = Photo.get(params.id)
@@ -191,12 +187,10 @@ class PhotoController {
         def pic = Photo.get(params.id)
         if (pic != null) {
             File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.thumbnailFilename}")
-            response.contentType = 'image/png'
             response.outputStream << new FileInputStream(picFile)
-            response.outputStream.flush()
-        } else {
-            log.error("Не найдена фотография ид = " + params.id);
         }
+        response.contentType = 'image/png'
+        response.outputStream.flush()
     }
 
     def delete() {

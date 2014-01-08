@@ -12,7 +12,7 @@ class UrlMappings {
         "/contact"(view: "/siteinfo/contact")
         "/terms"(view: "/siteinfo/terms")
         "/imprint"(view: "/siteinfo/imprint")
-        "/nextSteps"(view: "/home/nextSteps")
+        "/help"(view: "/home/help")
 
         /*
          * Pages with controller

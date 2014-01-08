@@ -1,8 +1,6 @@
 package ru.homeless.model
 
-
-
-import grails.test.mixin.*
+import grails.test.mixin.TestFor
 import ru.homeless.model.animal.Animal
 
 /**
@@ -12,6 +10,11 @@ import ru.homeless.model.animal.Animal
 class AnimalSpec {
 
     void testSomething() {
-       fail "Implement me"
+//        Animal animal = new Animal(name: 'test');
+//        Set<Photo> photos = new HashSet<>();
+//        photos.add(new Photo(id: 1))
+//        photos.add(new Photo(id: 2))
+//        animal.setPhotos(photos)
+//        println(animal?.photos*.id)
     }
 }
