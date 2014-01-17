@@ -57,7 +57,7 @@
                                                               default="Description"/></label>
 
     <div class="controls">
-        <g:textArea name="description" value="${animalInstance?.description}" rows="4" cols="100"/>
+        <g:textArea class="span4" name="description" value="${animalInstance?.description}" rows="4" />
         <span class="help-inline">${hasErrors(bean: animalInstance, field: 'description', 'error')}</span>
     </div>
 </div>

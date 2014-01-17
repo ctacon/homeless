@@ -97,6 +97,7 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.serverURL = "http://homeless.dev:8080/${appName}"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -115,6 +116,7 @@ log4j = {
         info 'stdout'
         additivity = true
     }
+    debug 'com.the6hours', 'grails.app.taglib.com.the6hours'
     error 'org.codehaus.groovy.grails.web.servlet',        // controllers
             'org.codehaus.groovy.grails.web.pages',          // GSP
             'org.codehaus.groovy.grails.web.sitemesh',       // layouts
@@ -131,6 +133,20 @@ log4j = {
 
     info 'ru.homeless.security.RegisterController'
 }
+
+
+//Facebook auth!!!
+//***************************************************************************************
+grails.plugin.springsecurity.facebook.domain.classname='ru.homeless.model.Person'
+grails.plugin.springsecurity.facebook.appId=1399516536964202
+grails.plugin.springsecurity.facebook.secret='b31c39b8118aef13b5fb0c3d38c3e362'
+grails.plugin.springsecurity.facebook.autoCreate.enabled=true
+grails.plugin.springsecurity.facebook.autoCreate.roles=['ROLE_USER', 'ROLE_FACEBOOK']
+grails.plugin.springsecurity.facebook.filter.types='redirect'
+//grails.plugin.springsecurity.facebook.filter.type='redirect'
+//grails.plugin.springsecurity.facebook.taglib.button.text='Login with Facebook'
+//grails.plugins.springsecurity.facebook.taglib.button.img
+//***************************************************************************************
 
 
 

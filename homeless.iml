@@ -94,9 +94,15 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/3.2.0.RC1/spring-security-web-3.2.0.RC1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.2.0.RC1/spring-security-core-3.2.0.RC1.jar!/" />
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.0.2.RELEASE/spring-social-core-1.0.2.RELEASE.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.9.9/jackson-core-asl-1.9.9.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.9.9/jackson-mapper-asl-1.9.9.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-facebook/1.0.3.RELEASE/spring-social-facebook-1.0.3.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-security-core-3.2.0.RC1-sources.jar!/" />
+        </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>

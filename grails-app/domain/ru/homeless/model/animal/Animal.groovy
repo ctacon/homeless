@@ -37,6 +37,7 @@ class Animal {
 
     static hasMany = [photos: Photo, comments: Comment]
     static mapping = {
+        description type: 'text'
         //  version false
     }
 
@@ -46,11 +47,26 @@ class Animal {
         color blank: true, nullable: true
         character nullable: true
         avatar nullable: true
-        description blank: true, nullable: true
+        description type: 'text', blank: true, nullable: true
         photos nullable: true
         comments nullable: true
         status nullable: true
         place nullable: true
+    }
+
+    public Collection<Comment> getCommentsSorted() {
+        return (comments?.findAll { it.parent == null })?.sort { it.dateCreated }
+    }
+
+    public String getShortDescription() {
+        int count = 50;
+        String shortDesc = description
+        if (shortDesc != null && shortDesc.length() > count) {
+            shortDesc = description.substring(0, count)
+        } else {
+            shortDesc = "";
+        }
+        return String.format("%-" + count + "s", shortDesc);
     }
 
 /*

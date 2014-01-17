@@ -9,6 +9,7 @@ import org.springframework.security.authentication.LockedException
 import org.springframework.security.core.context.SecurityContextHolder as SCH
 import org.springframework.security.web.WebAttributes
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
+import ru.homeless.model.Person
 
 import javax.servlet.http.HttpServletResponse
 
@@ -124,5 +125,18 @@ class LoginController {
      */
     def ajaxDenied = {
         render([error: 'access denied'] as JSON)
+    }
+
+    def getUser() {
+        try {
+            if (springSecurityService.isLoggedIn()) {
+                render([person: (Person) springSecurityService.getCurrentUser()])
+            } else {
+                render([])
+            }
+        }catch (Exception ex){
+//            log.error(ex,ex)
+             render()
+        }
     }
 }

@@ -1,5 +1,7 @@
 package ru.homeless.model
 
+import ru.homeless.model.animal.Animal
+
 /**
  * Comment
  * A domain class describes the data object and it's mapping to the database
@@ -21,7 +23,7 @@ class Comment {
 //	static hasOne		= []	// tells GORM to associate another domain object as an owner in a 1-1 mapping
 //	static hasMany		= []	// tells GORM to associate other domain objects for a 1-n or n-m mapping
 //	static mappedBy		= []	// specifies which property should be used in a mapping 
-    static belongsTo = [parent: Comment]
+    static belongsTo = [parent: Comment, animal: Animal]
     static mapping = {
     }
 
@@ -31,6 +33,7 @@ class Comment {
         childComments nullable: true
         parent nullable: true
         text blank: false
+        animal nullable: true
     }
 
     public Collection<Comment> getChildCommentsSorted() {

@@ -1,5 +1,6 @@
 package ru.homeless.model
 
+import grails.plugin.springsecurity.SpringSecurityService
 import org.imgscalr.Scalr
 import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.web.multipart.MultipartFile
@@ -14,6 +15,7 @@ import java.awt.image.BufferedImage
  * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
  */
 class AnimalController {
+    def SpringSecurityService springSecurityService
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -49,8 +51,8 @@ class AnimalController {
             redirect(action: "list")
             return
         }
-
-        [animalInstance: animalInstance]
+        Person currentLoggedInUser = springSecurityService.getCurrentUser()
+        [animalInstance: animalInstance, currentLoggedInUser: currentLoggedInUser]
     }
 
     def edit() {
@@ -139,7 +141,7 @@ class AnimalController {
                 File newFile = new File("$storageDirectory/$newFilename")
                 file.transferTo(newFile)
 
-                BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile),Scalr.Mode.FIT_EXACT , 150, 150);
+                BufferedImage thumbnail = Scalr.resize(ImageIO.read(newFile), Scalr.Mode.FIT_EXACT, 150, 150);
                 String thumbnailFilename = newFilenameBase + '-thumbnail.png'
                 File thumbnailFile = new File("$storageDirectory/$thumbnailFilename")
                 ImageIO.write(thumbnail, 'png', thumbnailFile)

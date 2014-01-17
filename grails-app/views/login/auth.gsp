@@ -10,7 +10,7 @@
     <div class="row">
         <div class="span3"></div>
 
-        <div class="span6">
+        <div class="span8">
             <h3><g:message code="springSecurity.login.header"/></h3>
 
             <form id='loginForm' class='form-horizontal' action='${postUrl}' method='POST' autocomplete='on'>
@@ -45,6 +45,7 @@
                     <g:link class="btn btn-danger"
                             controller='register' action='forgotPassword'><g:message
                             code='spring.security.ui.login.forgotPassword'/></g:link>
+                    <facebookAuth:connect />
                 </div>
 
             </form>

@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'tabicon.jpg')}"
           type="image/x-icon"/>
-
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-custom.css')}" type="text/css">
     %{--<link rel="apple-touch-icon" href="apssets/ico/aple-touch-icon.png">--}%
     %{--<link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-72x72.png" sizes="72x72">--}%
     %{--<link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-114x114.png" sizes="114x114">--}%
@@ -21,7 +21,7 @@
     <r:require modules="jquery"/>
     <r:require modules="bootstrap"/>
     <r:require modules="bootstrap_utils"/>
-    <g:javascript library='jquery' />
+    <g:javascript library='jquery'/>
 
     <r:layoutResources/>
     <g:layoutHead/>
@@ -35,17 +35,20 @@
 </head>
 
 <body>
-<g:render template="/_menu/navbar"/>
+<div class="container">
+    <g:render template="/_menu/navbar"/>
 
-<!-- Enable to overwrite Header by individual page -->
-<%--	<g:if test="${ pageProperty(name:'page.header') }">
-   		<g:pageProperty name="page.header" />
-	</g:if>
-	<g:else>
-		<g:render template="/layouts/header"/>														
-	</g:else>      --%>
+    <!-- Enable to overwrite Header by individual page -->
+    <%--	<g:if test="${ pageProperty(name:'page.header') }">
+               <g:pageProperty name="page.header" />
+        </g:if>
+        <g:else>
+            <g:render template="/layouts/header"/>
+        </g:else>      --%>
 
-<g:render template="/layouts/content"/>
+    <g:render template="/layouts/content"/>
+
+</div>
 
 <!-- Enable to overwrite Footer by individual page -->
 <%--	<g:if test="${ pageProperty(name:'page.footer') }">

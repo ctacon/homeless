@@ -202,8 +202,9 @@
     <sec:ifAnyGranted roles="ROLE_ADMIN">
         <div class="row">
             <div class="span1">
-                <g:link class="btn btn-primary" action="edit"><g:message code="default.edit.label"
-                                                                         args="[entityName]"/></g:link>
+                <g:link class="btn btn-primary" action="edit" id="${animalInstance.id}"><g:message
+                        code="default.edit.label"
+                        args="[entityName]"/></g:link>
             </div>
         </div>
     </sec:ifAnyGranted>
@@ -219,7 +220,13 @@
 
     <div class="row">
         <div class="span10">
-
+            %{--<ul class="media-list">--}%
+            %{--<g:render template="/comment/comment_group" collection="${animalInstance.comments}"/>--}%
+            %{--<sec:ifLoggedIn>--}%
+            %{--<g:include controller="comment" action="create" model="['person': currentLoggedInUser, 'current': null,'animal' : animalInstance.id]"/>--}%
+            %{--</sec:ifLoggedIn>--}%
+            %{--</ul>--}%
+            <g:include controller="comment" action="list" params="[animalInstance: animalInstance]"/>
         </div>
     </div>
 </div>

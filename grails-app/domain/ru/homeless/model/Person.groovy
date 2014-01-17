@@ -1,13 +1,18 @@
 package ru.homeless.model
 
+import grails.plugin.springsecurity.userdetails.GrailsUser
 import ru.homeless.security.User
 
 /**
  * Person   - класс пользователя
  * A domain class describes the data object and it's mapping to the database
  */
-class Person extends User {
+class Person extends User{
     Photo avatar
+    long uid
+    String accessToken
+    Date accessTokenExpires
+    String fullName
 
     /* Default (injected) attributes of GORM */
 //	Long	id
@@ -27,13 +32,29 @@ class Person extends User {
 
     static constraints = {
         avatar nullable: true
+        uid unique: true
+        accessToken nullable: true
+        accessTokenExpires nullable: true
+        fullName nullable: true
     }
+
+
+
 
     /*
      * Methods of the Domain Class
      */
-//	@Override	// Override toString for a nicer / more descriptive UI 
-//	public String toString() {
-//		return "${name}";
-//	}
+
+
+    @Override
+    public java.lang.String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", avatar=" + avatar +
+                ", uid=" + uid +
+                ", accessToken='" + accessToken + '\'' +
+                ", accessTokenExpires=" + accessTokenExpires +
+                ", version=" + version +
+                '}';
+    }
 }

@@ -52,6 +52,8 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.24'
+//        compile 'org.springframework.social:spring-social-core:1.0.3.RELEASE'
+        compile 'org.springframework.social:spring-social-facebook:1.0.3.RELEASE'
     }
 
     plugins {
@@ -69,7 +71,8 @@ grails.project.dependency.resolution = {
         compile ":jquery-ui:1.10.3"
         compile ":famfamfam:1.0.1"
         compile ":spring-security-ui:1.0-RC1"
-        compile ":bootstrap-file-upload:2.1.2"
+        //compile ":bootstrap-file-upload:2.1.2"
+        compile "org.grails.plugins:spring-security-facebook:0.15.2-CORE2"
 
 
         // plugins needed at runtime but not for compilation

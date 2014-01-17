@@ -8,6 +8,7 @@ class BootStrap {
         def adminRole = ru.homeless.security.Role.findByAuthority('ROLE_ADMIN') ?: new ru.homeless.security.Role(authority: 'ROLE_ADMIN').save(failOnError: true)
         def superAdminRole = ru.homeless.security.Role.findByAuthority('ROLE_SUPER_ADMIN') ?: new ru.homeless.security.Role(authority: 'ROLE_SUPER_ADMIN').save(failOnError: true)
         def userRole = ru.homeless.security.Role.findByAuthority('ROLE_USER') ?: new ru.homeless.security.Role(authority: 'ROLE_USER').save(failOnError: true)
+        def userRoleFS = ru.homeless.security.Role.findByAuthority('ROLE_FACEBOOK') ?: new ru.homeless.security.Role(authority: 'ROLE_FACEBOOK').save(failOnError: true)
         def superAdminUser = ru.homeless.model.Person.findByUsername('admin') ?: new ru.homeless.model.Person(
                 username: 'admin',
                 password: 'admin',
@@ -19,6 +20,9 @@ class BootStrap {
         }
         if(!superAdminUser.authorities.contains(superAdminRole)){
             ru.homeless.security.UserRole.create superAdminUser, superAdminRole
+        }
+        if(!superAdminUser.authorities.contains(userRole)){
+            ru.homeless.security.UserRole.create superAdminUser, userRole
         }
 
         //Вспомогательные таблицы

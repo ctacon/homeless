@@ -12,11 +12,15 @@
 <section id="list-animal" class="first">
     <sec:ifLoggedIn>
         <g:link class="btn btn-primary" action="create"><g:message code="default.new.label"
-                                           args="[entityName]"/></g:link>
+                                                                   args="[entityName]"/></g:link>
     </sec:ifLoggedIn>
     <ul class="thumbnails">
+    <div class="row">
         <g:each in="${animalInstanceList}" status="i" var="animalInstance">
-
+            <g:if test="${i % 3 == 0}">
+                </div>
+                <div class="row">
+            </g:if>
             <li class="span2">
                 <div class="thumbnail">
                     <g:link action="show" id="${animalInstance.id}">
@@ -29,19 +33,19 @@
                     <div class="caption">
                         <h6 class="text-center">${fieldValue(bean: animalInstance, field: "name")}</h6>
 
-                        <p>${animalInstance.description}</p>
+                        <p style="word-wrap: break-word"><small>${animalInstance.getShortDescription()}...</small></p>
                     </div>
                 </div>
             </li>
-
         </g:each>
+    </div>
     </ul>
 
 
     <div class="pagination">
         <bs:paginate total="${animalInstanceTotal}"
-        next="Вперед"
-        prev="Назад"/>
+                     next="Вперед"
+                     prev="Назад"/>
     </div>
 </section>
 </body>
