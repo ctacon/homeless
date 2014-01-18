@@ -6,7 +6,7 @@
                          messageCode='spring.security.ui.login.register'/>
     </sec:ifNotGranted>
     <sec:ifAnyGranted roles="ROLE_USER,ROLE_FACEBOOK">
-        ${person.fullName}
+        ${personInstance.getLoggedInName()}
         <g:link controller='logout' action='index'>
             <g:message code="security.signoff.label"
                        default="LogOut"/></g:link>

@@ -184,3 +184,6 @@ grails.plugin.springsecurity.interceptUrlMap = [
         '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
+
+file.upload.directory='/Users/ctacon/programming/tmp'
+

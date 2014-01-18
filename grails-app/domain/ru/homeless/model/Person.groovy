@@ -1,13 +1,12 @@
 package ru.homeless.model
 
-import grails.plugin.springsecurity.userdetails.GrailsUser
 import ru.homeless.security.User
 
 /**
  * Person   - класс пользователя
  * A domain class describes the data object and it's mapping to the database
  */
-class Person extends User{
+class Person extends User {
     Photo avatar
     long uid
     String accessToken
@@ -39,7 +38,9 @@ class Person extends User{
     }
 
 
-
+    public String getLoggedInName() {
+        return fullName == null || fullName.isEmpty() ? username : fullName;
+    }
 
     /*
      * Methods of the Domain Class
@@ -52,9 +53,6 @@ class Person extends User{
                 "id=" + id +
                 ", avatar=" + avatar +
                 ", uid=" + uid +
-                ", accessToken='" + accessToken + '\'' +
-                ", accessTokenExpires=" + accessTokenExpires +
-                ", version=" + version +
                 '}';
     }
 }
