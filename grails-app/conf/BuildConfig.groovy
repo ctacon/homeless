@@ -72,7 +72,10 @@ grails.project.dependency.resolution = {
         compile ":famfamfam:1.0.1"
         compile ":spring-security-ui:1.0-RC1"
         //compile ":bootstrap-file-upload:2.1.2"
-        compile "org.grails.plugins:spring-security-facebook:0.15.2-CORE2"
+       // compile "org.grails.plugins:spring-security-facebook:0.15.2-CORE2"
+
+        compile ':spring-security-oauth:2.0.2'
+        compile ':spring-security-oauth-facebook:0.1'
 
 
         // plugins needed at runtime but not for compilation

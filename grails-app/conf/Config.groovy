@@ -137,16 +137,31 @@ log4j = {
 
 //Facebook auth!!!
 //***************************************************************************************
-grails.plugin.springsecurity.facebook.domain.classname='ru.homeless.model.Person'
-grails.plugin.springsecurity.facebook.appId=1399516536964202
-grails.plugin.springsecurity.facebook.secret='b31c39b8118aef13b5fb0c3d38c3e362'
-grails.plugin.springsecurity.facebook.autoCreate.enabled=true
-grails.plugin.springsecurity.facebook.autoCreate.roles=['ROLE_USER', 'ROLE_FACEBOOK']
-grails.plugin.springsecurity.facebook.filter.types='redirect'
+//grails.plugin.springsecurity.facebook.domain.classname='ru.homeless.model.Person'
+//grails.plugin.springsecurity.facebook.appId=1399516536964202
+//grails.plugin.springsecurity.facebook.secret='b31c39b8118aef13b5fb0c3d38c3e362'
+//grails.plugin.springsecurity.facebook.autoCreate.enabled=true
+//grails.plugin.springsecurity.facebook.autoCreate.roles=['ROLE_USER', 'ROLE_FACEBOOK']
+//grails.plugin.springsecurity.facebook.filter.types='redirect'
 //grails.plugin.springsecurity.facebook.filter.type='redirect'
 //grails.plugin.springsecurity.facebook.taglib.button.text='Login with Facebook'
 //grails.plugins.springsecurity.facebook.taglib.button.img
 //***************************************************************************************
+oauth {
+    debug = true
+    providers {
+        facebook {
+            api = org.scribe.builder.api.FacebookApi
+            key = '1399516536964202'
+            secret = 'b31c39b8118aef13b5fb0c3d38c3e362'
+            successUri = '/oauth/facebook/success'
+            failureUri = '/oauth/facebook/error'
+            callback = "${grails.serverURL}/oauth/facebook/callback"
+        }
+    }
+}
+
+
 
 
 
@@ -187,3 +202,6 @@ grails.plugin.springsecurity.interceptUrlMap = [
 
 file.upload.directory='/Users/ctacon/programming/tmp'
 
+
+// Added by the Spring Security OAuth plugin:
+grails.plugin.springsecurity.oauth.domainClass = 'ru.homeless.security.OAuthID'
