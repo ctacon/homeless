@@ -134,7 +134,6 @@ log4j = {
     info 'ru.homeless.security.RegisterController'
 }
 
-
 //Facebook auth!!!
 //***************************************************************************************
 //grails.plugin.springsecurity.facebook.domain.classname='ru.homeless.model.Person'
@@ -157,6 +156,14 @@ oauth {
             successUri = '/oauth/facebook/success'
             failureUri = '/oauth/facebook/error'
             callback = "${grails.serverURL}/oauth/facebook/callback"
+        }
+        vkontakte {
+            api = org.scribe.builder.api.VkontakteApi
+            key = '4137269'
+            secret = 'ddQeoqYXPgePq2M7Zj9g'
+            successUri = '/oauth/vkontakte/success'
+            failureUri = '/oauth/vkontakte/error'
+            callback = "${grails.serverURL}/oauth/vkontakte/callback"
         }
     }
 }
@@ -195,13 +202,12 @@ grails.plugin.springsecurity.interceptUrlMap = [
         '/person/*': ['IS_AUTHENTICATED_REMEMBERED'],
         '/post/followAjax': ['ROLE_USER'],
         '/post/addPostAjax': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
-      //  '/animal/create': ['ROLE_USER'],
+        //  '/animal/create': ['ROLE_USER'],
         '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
 
-file.upload.directory='/Users/ctacon/programming/tmp'
-
+file.upload.directory = '/Users/ctacon/programming/tmp'
 
 // Added by the Spring Security OAuth plugin:
 grails.plugin.springsecurity.oauth.domainClass = 'ru.homeless.security.OAuthID'

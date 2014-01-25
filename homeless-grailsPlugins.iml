@@ -107,6 +107,10 @@
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/spring-security-oauth-facebook-0.1/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/spring-security-oauth-facebook-0.1/grails-app/services" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/target/work/plugins/spring-security-oauth-vkontakte-0.1.1">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/spring-security-oauth-vkontakte-0.1.1/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/spring-security-oauth-vkontakte-0.1.1/grails-app/services" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/spring-security-ui-1.0-RC1">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/controllers" isTestSource="false" />
@@ -127,8 +131,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="spring-social-vkontakte-1.1.0.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.3.1" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="imgscalr-lib-4.2-javadoc" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="spring-social-vkontakte-1.1.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="spring-social-vkontakte-1.1.0.RELEASE-javadoc" level="application" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (homeless-grailsPlugins)">
         <CLASSES>

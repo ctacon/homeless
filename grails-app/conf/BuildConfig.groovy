@@ -54,6 +54,7 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.24'
 //        compile 'org.springframework.social:spring-social-core:1.0.3.RELEASE'
         compile 'org.springframework.social:spring-social-facebook:1.0.3.RELEASE'
+
     }
 
     plugins {
@@ -76,6 +77,7 @@ grails.project.dependency.resolution = {
 
         compile ':spring-security-oauth:2.0.2'
         compile ':spring-security-oauth-facebook:0.1'
+        compile ':spring-security-oauth-vkontakte:0.1.1'
 
 
         // plugins needed at runtime but not for compilation

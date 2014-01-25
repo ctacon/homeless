@@ -45,8 +45,8 @@
                     <g:link class="btn btn-danger"
                             controller='register' action='forgotPassword'><g:message
                             code='spring.security.ui.login.forgotPassword'/></g:link>
-                    %{--<facebookAuth:connect />--}%
                     <oauth:connect provider="facebook" id="facebook-connect-link">Facebook</oauth:connect>
+                    <oauth:connect provider="vkontakte" id="vkontakte-connect-link">VK</oauth:connect>
                 </div>
 
             </form>

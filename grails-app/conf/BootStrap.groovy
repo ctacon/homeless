@@ -9,6 +9,7 @@ class BootStrap {
         def superAdminRole = ru.homeless.security.Role.findByAuthority('ROLE_SUPER_ADMIN') ?: new ru.homeless.security.Role(authority: 'ROLE_SUPER_ADMIN').save(failOnError: true)
         def userRole = ru.homeless.security.Role.findByAuthority('ROLE_USER') ?: new ru.homeless.security.Role(authority: 'ROLE_USER').save(failOnError: true)
         def userRoleFS = ru.homeless.security.Role.findByAuthority('ROLE_FACEBOOK') ?: new ru.homeless.security.Role(authority: 'ROLE_FACEBOOK').save(failOnError: true)
+        def userRoleVK = ru.homeless.security.Role.findByAuthority('ROLE_VKONTAKTE') ?: new ru.homeless.security.Role(authority: 'ROLE_VKONTAKTE').save(failOnError: true)
         def superAdminUser = ru.homeless.model.Person.findByUsername('admin') ?: new ru.homeless.model.Person(
                 username: 'admin',
                 password: 'admin',
