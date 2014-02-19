@@ -11,7 +11,7 @@
             <a class="brand" href="${createLink(uri: '/')}">
                 <img class="logo"
                 %{--src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'kickstart/img', file: 'grails.png')}"--}%
-                     src="${resource(dir: 'images', file: 'bezdomishi22.jpg')}"
+                     src="${resource(dir: 'images', file: 'icon.png')}"
                      alt="${meta(name: 'app.name')}"/>
                 ${meta(name: 'app.name')}
                 <small>v${meta(name: 'app.version')}</small>
@@ -39,8 +39,55 @@
                         </ul>
                     </li>
                 </sec:ifAnyGranted>
-                <li><a href="${createLink(controller: "Animal", action: "index")}">Животные</a></li>
+                <li><a href="${createLink(controller: "Animal", action: "list")}">Животные</a></li>
                 <li><a href="${createLink(controller: "help")}">Помощь</a></li>
+                <sec:ifAnyGranted roles="ROLE_ADMIN">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Справочники<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                                <li class="controller">
+                                    <g:link controller="animalType">
+                                        Вид животного
+                                    </g:link>
+                                </li>
+                            <li class="controller">
+                                <g:link controller="animalStatus">
+                                    Состояние животного
+                                </g:link>
+                            </li>
+                            <li class="controller">
+                                <g:link controller="animalSex">
+                                    Пол животного
+                                </g:link>
+                            </li>
+                            <li class="controller">
+                                <g:link controller="animalPlace">
+                                    Место животного
+                                </g:link>
+                            </li>
+                            <li class="controller">
+                                <g:link controller="animalHair">
+                                    Шерсть животного
+                                </g:link>
+                            </li>
+                            <li class="controller">
+                                <g:link controller="animalColor">
+                                    Цвет животного
+                                </g:link>
+                            </li>
+                            <li class="controller">
+                                <g:link controller="animalCharacter">
+                                    Характер животного
+                                </g:link>
+                            </li>
+                            <li class="controller">
+                                <g:link controller="personPostType">
+                                    Должность пользователя
+                                </g:link>
+                            </li>
+                        </ul>
+                    </li>
+                </sec:ifAnyGranted>
             </ul>
 
             <div class="pull-left">

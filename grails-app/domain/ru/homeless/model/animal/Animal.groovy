@@ -14,20 +14,21 @@ class Animal {
 //	Long	version
     String name
     boolean losted
-    int age
+    Date age
     AnimalSex sex
     AnimalType type
     AnimalStatus status
     AnimalCharacter character
     AnimalPlace place
-    String color
+    AnimalColor color
+    AnimalHair hair
     Photo avatar
     String description
     boolean findOwner = false
     boolean published = false
 
     /* Automatic timestamping of GORM */
-//	Date	dateCreated
+    Date dateCreated
 //	Date	lastUpdated
 
 //	static belongsTo	= []	// tells GORM to cascade commands: e.g., delete this object if the "parent" is deleted.
@@ -43,8 +44,9 @@ class Animal {
 
     static constraints = {
         name blank: false, maxSize: 50
-        age max: 12 * 30, min: 0
-        color blank: true, nullable: true
+//        age max: 12 * 30, min: 0
+        color nullable: true
+        hair nullable: true
         character nullable: true
         avatar nullable: true
         description type: 'text', blank: true, nullable: true
@@ -64,7 +66,7 @@ class Animal {
         if (shortDesc != null && shortDesc.length() > count) {
             shortDesc = description.substring(0, count)
         } else {
-            shortDesc = "";
+            if (shortDesc == null) shortDesc = "";
         }
         return String.format("%-" + count + "s", shortDesc);
     }

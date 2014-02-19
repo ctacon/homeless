@@ -1,11 +1,11 @@
-package ru.homeless.model
+package ru.homeless.model.animal
 
 import grails.plugin.springsecurity.SpringSecurityService
 import org.imgscalr.Scalr
 import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.multipart.MultipartHttpServletRequest
-import ru.homeless.model.animal.Animal
+import ru.homeless.model.*
 
 import javax.imageio.ImageIO
 import java.awt.image.BufferedImage
@@ -16,7 +16,8 @@ import java.awt.image.BufferedImage
  */
 class AnimalController {
     def SpringSecurityService springSecurityService
-
+    def PhotoService photoService
+    def AnimalService animalService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
 
@@ -25,23 +26,61 @@ class AnimalController {
     }
 
     def list() {
-        params.max = Math.min(params.max ? params.int('max') : 10, 100)
-        [animalInstanceList: Animal.list(params), animalInstanceTotal: Animal.count()]
+        [animalFilterPublished: true,
+                animalFilterType: null,
+                animalFilterSex: null,
+                animalMinAge: 0,
+                animalMaxAge: 240,
+                animalFilterCharacter: null,
+                animalFilterColor: null,
+                animalFilterHair: null,
+                animalFilterFindOwner: false]
+
     }
+
+    def list_filter() {
+        log.info('params = ' + params)
+        List animalList
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        animalList = animalService.filter(params)
+        [animalInstanceList: animalList, animalInstanceTotal: Animal.count()]
+    }
+
 
     def create() {
         [animalInstance: new Animal(params)]
     }
 
     def save() {
-        def animalInstance = new Animal(params)
-        if (!animalInstance.save(flush: true)) {
+        try {
+            if (params.age) {
+                params.age = Date.parse('yyyyMM', params.age)
+            }
+            def animalInstance = new Animal(params)
+            log.info('age = ' + animalInstance.age)
+
+            animalInstance.photos?.each {
+                if (it.isAvatar()) {
+                    animalInstance.avatar = it
+                    return true
+                }
+            }
+            if (!animalInstance.save(flush: true)) {
+                render(view: "create", model: [animalInstance: animalInstance])
+                return
+            }
+            PersonPost personPost = new PersonPost(person: springSecurityService.currentUser,
+                    animal: animalInstance, type: PersonPostType.get(1)).save(flush: true)
+            log.info('personPost.id = ' + personPost.id)
+
+
+            flash.message = message(code: 'default.created.message', args: [message(code: 'animal.label', default: 'Animal'), animalInstance.id])
+            redirect(action: "show", id: animalInstance.id)
+        } catch (Exception ex) {
+            log.error(ex, ex)
             render(view: "create", model: [animalInstance: animalInstance])
             return
         }
-
-        flash.message = message(code: 'default.created.message', args: [message(code: 'animal.label', default: 'Animal'), animalInstance.id])
-        redirect(action: "show", id: animalInstance.id)
     }
 
     def show() {
@@ -84,7 +123,9 @@ class AnimalController {
                 return
             }
         }
-
+        if (params.age) {
+            params.age = Date.parse('yyyyMM', params.age)
+        }
         animalInstance.properties = params
 
         def _toBeDeleted = animalInstance.photos.findAll { (it?.deleted || (it == null)) }
@@ -92,6 +133,13 @@ class AnimalController {
         log.info("_toBeDeleted = " + _toBeDeleted.size())
         if (_toBeDeleted) {
             animalInstance.photos.removeAll(_toBeDeleted)
+        }
+
+        animalInstance.photos?.each {
+            if (it.isAvatar()) {
+                animalInstance.avatar = it
+                return true
+            }
         }
 
         if (!animalInstance.hasErrors() && !animalInstance.save(flush: true)) {

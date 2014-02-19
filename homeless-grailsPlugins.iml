@@ -18,6 +18,7 @@
           <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/views" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.10.2.2/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-oauth-facebook-0.1/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/remote-pagination-0.4.6/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -79,6 +80,10 @@
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/oauth-2.3/grails-app/controllers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/oauth-2.3/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/oauth-2.3/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/target/work/plugins/remote-pagination-0.4.6">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/remote-pagination-0.4.6/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/remote-pagination-0.4.6/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.1">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.1/src/java" isTestSource="false" />

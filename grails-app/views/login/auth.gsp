@@ -15,6 +15,16 @@
 
             <form id='loginForm' class='form-horizontal' action='${postUrl}' method='POST' autocomplete='on'>
                 <input name="_spring_security_remember_me" id="remember-me" value="1" type="hidden">
+
+                <div class="controls">
+                    <oauth:connect provider="facebook"
+                                   id="facebook-connect-link"><img
+                            src="${resource(dir: 'images/auth/facebook_login_buttons', file: 'active_404.png')}"/></oauth:connect>
+                    <oauth:connect provider="vkontakte" id="vkontakte-connect-link"><img
+                            src="${resource(dir: 'images/auth/vk_login_buttons/', file: 'polny_logotip.png')}"/></oauth:connect>
+                </div>
+
+
                 <fieldset class="form">
                     <div class="control-group fieldcontain ${hasErrors(bean: _DemoPageInstance, field: 'name', 'error')} ">
                         <label for='username' class="control-label"><g:message
@@ -41,12 +51,11 @@
                     <s2ui:linkButton
                             class="btn btn-inverse"
                             elementId='register' controller='register'
-                                     messageCode='spring.security.ui.login.register'/>
+                            messageCode='spring.security.ui.login.register'/>
                     <g:link class="btn btn-danger"
                             controller='register' action='forgotPassword'><g:message
                             code='spring.security.ui.login.forgotPassword'/></g:link>
-                    <oauth:connect provider="facebook" id="facebook-connect-link">Facebook</oauth:connect>
-                    <oauth:connect provider="vkontakte" id="vkontakte-connect-link">VK</oauth:connect>
+
                 </div>
 
             </form>

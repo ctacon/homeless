@@ -10,9 +10,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'tabicon.jpg')}"
+    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'tabicon.png')}"
           type="image/x-icon"/>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-custom.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'spinner.css')}" type="text/css">
     %{--<link rel="apple-touch-icon" href="apssets/ico/aple-touch-icon.png">--}%
     %{--<link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-72x72.png" sizes="72x72">--}%
     %{--<link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-114x114.png" sizes="114x114">--}%
@@ -22,6 +23,7 @@
     <r:require modules="bootstrap"/>
     <r:require modules="bootstrap_utils"/>
     <g:javascript library='jquery'/>
+    <g:javascript library='application'/>
 
     <r:layoutResources/>
     <g:layoutHead/>
@@ -29,6 +31,7 @@
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
 	<![endif]-->
 
     <%-- For Javascript see end of body --%>
@@ -37,6 +40,17 @@
 <body>
 <div class="container">
     <g:render template="/_menu/navbar"/>
+
+
+    <g:if test="${!pageProperty(name: 'page.navigation')}">
+        <g:render template="/_menu/navigationmenu"/>
+        %{--<g:pageProperty name="page.navigation"/>--}%
+    </g:if>
+    <g:else>
+
+    </g:else>
+
+
 
     <!-- Enable to overwrite Header by individual page -->
     <%--	<g:if test="${ pageProperty(name:'page.header') }">
@@ -68,6 +82,10 @@
 %{--</g:else>--}%
 
 <!-- Included Javascript files and other resources -->
+%{--style="display: none"--}%
+<div id="spinner" class="ajax-spinner-loader" hidden="hidden">
+    <g:img dir="images" file="spinner.gif"/>
+</div>
 <r:layoutResources/>
 </body>
 

@@ -9,14 +9,11 @@ import ru.homeless.security.User
  */
 class Person extends User {
     Photo avatar
-    long uid
+    Long uid
     String fullName
 
     String provider
     String accessToken
-
-
-
 
     /* Default (injected) attributes of GORM */
 //	Long	id
@@ -31,8 +28,8 @@ class Person extends User {
 
     static constraints = {
         avatar nullable: true
-        uid unique: true
-        accessToken nullable: true,unique: true
+        uid unique: true, nullable: true
+        accessToken nullable: true, unique: true
         provider nullable: true
         fullName nullable: true
     }

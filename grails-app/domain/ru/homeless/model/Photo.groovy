@@ -14,6 +14,7 @@ class Photo {
     String newFilename
     long fileSize
     boolean deleted
+    boolean avatar
 
     /* Automatic timestamping of GORM */
 //	Date	dateCreated

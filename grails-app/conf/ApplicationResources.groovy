@@ -14,8 +14,8 @@ modules = {
     imagegalery{
         resource url:'/bootstrap-Image-Gallery-3.1.0/css/bootstrap-image-gallery.min.css'
         resource url:'/gallery-master/css/blueimp-gallery.min.css'
-        resource url:'http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css'
-        resource url:'/bootstrap-Image-Gallery-3.1.0/css/bootstrap.min.css'
+//        resource url:'http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css'
+//        resource url:'/bootstrap-Image-Gallery-3.1.0/css/bootstrap.min.css'
         resource url:'http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js'
         resource url:'/bootstrap-Image-Gallery-3.1.0/js/bootstrap-image-gallery.min.js'
         resource url:'/gallery-master/js/blueimp-gallery.min.js'

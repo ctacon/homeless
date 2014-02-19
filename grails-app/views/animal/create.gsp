@@ -12,7 +12,8 @@
 
 <body>
 
-<section id="create-animal" class="first">
+%{--<section id="create-animal" class="first">--}%
+<div id="create-animal">
 
     <g:hasErrors bean="${animalInstance}">
         <div class="alert alert-error">
@@ -20,19 +21,19 @@
         </div>
     </g:hasErrors>
 
-    <g:form action="save" class="form-horizontal">
+    <g:form action="save" class="well form-inline span9">
         <fieldset class="form">
             <g:render template="form"/>
         </fieldset>
 
-        <div class="form-actions">
+        <div class="form-actions pull-right">
             <g:submitButton name="create" class="btn btn-primary"
                             value="${message(code: 'default.button.create.label', default: 'Create')}"/>
-            <button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset"/></button>
+            %{--<button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset"/></button>--}%
         </div>
     </g:form>
-
-</section>
+</div>
+%{--</section>--}%
 </body>
 
 </html>

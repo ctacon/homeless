@@ -72,6 +72,7 @@ grails.project.dependency.resolution = {
         compile ":jquery-ui:1.10.3"
         compile ":famfamfam:1.0.1"
         compile ":spring-security-ui:1.0-RC1"
+        compile ":remote-pagination:0.4.6"
         //compile ":bootstrap-file-upload:2.1.2"
        // compile "org.grails.plugins:spring-security-facebook:0.15.2-CORE2"
 

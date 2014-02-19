@@ -12,10 +12,10 @@
                        default="LogOut"/></g:link>
     </sec:ifAnyGranted>
 
-    <s2o:ifLoggedInWith provider="facebook">facebook yes</s2o:ifLoggedInWith>
-    <s2o:ifNotLoggedInWith provider="facebook">facebook no</s2o:ifNotLoggedInWith>
-    <s2o:ifLoggedInWith provider="vkontakte">yes</s2o:ifLoggedInWith>
-    <s2o:ifNotLoggedInWith provider="vkontakte">no</s2o:ifNotLoggedInWith>
+    %{--<s2o:ifLoggedInWith provider="facebook">facebook yes</s2o:ifLoggedInWith>--}%
+    %{--<s2o:ifNotLoggedInWith provider="facebook">facebook no</s2o:ifNotLoggedInWith>--}%
+    %{--<s2o:ifLoggedInWith provider="vkontakte">yes</s2o:ifLoggedInWith>--}%
+    %{--<s2o:ifNotLoggedInWith provider="vkontakte">no</s2o:ifNotLoggedInWith>--}%
 
 </ul>
 

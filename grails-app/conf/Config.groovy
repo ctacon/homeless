@@ -97,7 +97,7 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-        grails.serverURL = "http://homeless.dev:8080/${appName}"
+//        grails.serverURL = "http://homeless.dev:8080/${appName}"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -211,3 +211,7 @@ file.upload.directory = '/Users/ctacon/programming/tmp'
 
 // Added by the Spring Security OAuth plugin:
 grails.plugin.springsecurity.oauth.domainClass = 'ru.homeless.security.OAuthID'
+
+
+grails.plugin.remotepagination.max=10
+grails.plugin.remotepagination.enableBootstrap=true

@@ -1,7 +1,11 @@
 import ru.homeless.model.PersonPostType
+import ru.homeless.model.Photo
+import ru.homeless.model.PhotoService
 import ru.homeless.model.animal.*
 
 class BootStrap {
+    def PhotoService photoService
+    def grailsApplication
 
     def init = { servletContext ->
         //пользователи роли
@@ -10,19 +14,24 @@ class BootStrap {
         def userRole = ru.homeless.security.Role.findByAuthority('ROLE_USER') ?: new ru.homeless.security.Role(authority: 'ROLE_USER').save(failOnError: true)
         def userRoleFS = ru.homeless.security.Role.findByAuthority('ROLE_FACEBOOK') ?: new ru.homeless.security.Role(authority: 'ROLE_FACEBOOK').save(failOnError: true)
         def userRoleVK = ru.homeless.security.Role.findByAuthority('ROLE_VKONTAKTE') ?: new ru.homeless.security.Role(authority: 'ROLE_VKONTAKTE').save(failOnError: true)
+
+        Photo superAdminAvatar = photoService.save('admin-avatar.gif',
+                grailsApplication.getParentContext().getResource("classpath:/web-app/images/admin-avatar.gif").getInputStream().bytes)
         def superAdminUser = ru.homeless.model.Person.findByUsername('admin') ?: new ru.homeless.model.Person(
                 username: 'admin',
                 password: 'admin',
                 email: 'ctacon183@gmail.com',
-                enabled: true).save(failOnError: true)
+                enabled: true,
+                avatar: superAdminAvatar)
+                .save(failOnError: true)
 
         if (!superAdminUser.authorities.contains(adminRole)) {
             ru.homeless.security.UserRole.create superAdminUser, adminRole
         }
-        if(!superAdminUser.authorities.contains(superAdminRole)){
+        if (!superAdminUser.authorities.contains(superAdminRole)) {
             ru.homeless.security.UserRole.create superAdminUser, superAdminRole
         }
-        if(!superAdminUser.authorities.contains(userRole)){
+        if (!superAdminUser.authorities.contains(userRole)) {
             ru.homeless.security.UserRole.create superAdminUser, userRole
         }
 
@@ -35,6 +44,11 @@ class BootStrap {
 
         new AnimalHair(name: "Короткая").save(failOnError: true)
         new AnimalHair(name: "Длинная").save(failOnError: true)
+
+        new AnimalColor(name: "Синий").save(failOnError: true)
+        new AnimalColor(name: "Красный").save(failOnError: true)
+        new AnimalColor(name: "Серый").save(failOnError: true)
+
 
         new AnimalType(name: "Кошка").save(failOnError: true)
         new AnimalType(name: "Собака").save(failOnError: true)

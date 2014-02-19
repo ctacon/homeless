@@ -167,7 +167,7 @@ class PhotoController {
 //
 //                render results as JSON
 //                break;
-//            default: render status: HttpStatus.METHOD_NOT_ALLOWED.value()
+//            default: render animalFilterStatus: HttpStatus.METHOD_NOT_ALLOWED.value()
 //        }
 //    }
 
