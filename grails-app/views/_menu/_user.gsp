@@ -1,9 +1,10 @@
 <ul class="nav pull-right">
     <sec:ifNotGranted roles="ROLE_USER">
+
+        <s2ui:linkButton class="btn btn-link" elementId='register' controller='register'
+                         messageCode='spring.security.ui.login.register'/>
         <g:link class="btn btn-success" controller='login' action='auth' elementId='login'><g:message
                 code='security.signin.label'/></g:link>
-        <s2ui:linkButton class="btn btn-inverse" elementId='register' controller='register'
-                         messageCode='spring.security.ui.login.register'/>
     </sec:ifNotGranted>
     <sec:ifAnyGranted roles="ROLE_USER,ROLE_FACEBOOK">
         ${personInstance?.getLoggedInName()}

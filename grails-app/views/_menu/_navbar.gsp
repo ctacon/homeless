@@ -3,9 +3,9 @@
         <div class="container">
 
             %{--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">--}%
-                %{--<span class="icon-bar"></span>--}%
-                %{--<span class="icon-bar"></span>--}%
-                %{--<span class="icon-bar"></span>--}%
+            %{--<span class="icon-bar"></span>--}%
+            %{--<span class="icon-bar"></span>--}%
+            %{--<span class="icon-bar"></span>--}%
             %{--</a>--}%
 
             <a class="brand" href="${createLink(uri: '/')}">
@@ -40,16 +40,16 @@
                     </li>
                 </sec:ifAnyGranted>
                 <li><a href="${createLink(controller: "Animal", action: "list")}">Животные</a></li>
-                <li><a href="${createLink(controller: "help")}">Помощь</a></li>
+                <li><a href="${createLink(controller: "home", action: 'help')}">О нас</a></li>
                 <sec:ifAnyGranted roles="ROLE_ADMIN">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Справочники<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                                <li class="controller">
-                                    <g:link controller="animalType">
-                                        Вид животного
-                                    </g:link>
-                                </li>
+                            <li class="controller">
+                                <g:link controller="animalType">
+                                    Вид животного
+                                </g:link>
+                            </li>
                             <li class="controller">
                                 <g:link controller="animalStatus">
                                     Состояние животного
