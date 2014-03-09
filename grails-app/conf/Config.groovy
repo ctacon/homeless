@@ -203,6 +203,7 @@ grails.plugin.springsecurity.interceptUrlMap = [
         '/post/followAjax': ['ROLE_USER'],
         '/post/addPostAjax': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
         //  '/animal/create': ['ROLE_USER'],
+        '/person/show/*': ['ROLE_USER'],
         '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 

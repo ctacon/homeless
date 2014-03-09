@@ -11,17 +11,17 @@
         <div class="span3"></div>
 
         <div class="span8">
-            <h3><g:message code="springSecurity.login.header"/></h3>
+            <h3 class="offset3"><g:message code="springSecurity.login.header"/></h3>
 
-            <form id='loginForm' class='form-horizontal' action='${postUrl}' method='POST' autocomplete='on'>
+            <form id='loginForm' class='form-horizontal offset1' action='${postUrl}' method='POST' autocomplete='on'>
                 <input name="_spring_security_remember_me" id="remember-me" value="1" type="hidden">
 
                 <div class="controls">
                     <oauth:connect provider="facebook"
-                                   id="facebook-connect-link"><img
-                            src="${resource(dir: 'images/auth/facebook_login_buttons', file: 'active_404.png')}"/></oauth:connect>
-                    <oauth:connect provider="vkontakte" id="vkontakte-connect-link"><img
-                            src="${resource(dir: 'images/auth/vk_login_buttons/', file: 'polny_logotip.png')}"/></oauth:connect>
+                                   id="facebook-connect-link"><img width="150"
+                            src="${resource(dir: 'images/auth/', file: 'f-3.jpg')}"/></oauth:connect>
+                    <oauth:connect provider="vkontakte" id="vkontakte-connect-link"><img    width="150"
+                            src="${resource(dir: 'images/auth/', file: 'an_02.jpg')}"/></oauth:connect>
                 </div>
 
 
@@ -31,7 +31,7 @@
                                 code="springSecurity.login.username.label"/>:</label>
 
                         <div class="controls">
-                            <input type='text' class='span4' name='j_username' id='username'/>
+                            <input type='text' style="height: 30px" class='span3' name='j_username' id='username'/>
                         </div>
                     </div>
 
@@ -40,7 +40,8 @@
                                 code="springSecurity.login.password.label"/>:</label>
 
                         <div class="controls">
-                            <input type='password' class='span4' name='j_password' id='password'/>
+                            <input type='password' style="height: 30px" class='span3' name='j_password' id='password'/>
+
                         </div>
                     </div>
                 </fieldset>
@@ -49,10 +50,10 @@
                     <input type='submit' id="submit" class="btn btn-success"
                            value='${message(code: "springSecurity.login.button")}'/>
                     <s2ui:linkButton
-                            class="btn btn-inverse"
+                            class="btn btn-link"
                             elementId='register' controller='register'
                             messageCode='spring.security.ui.login.register'/>
-                    <g:link class="btn btn-danger"
+                    <g:link class="btn btn-link"
                             controller='register' action='forgotPassword'><g:message
                             code='spring.security.ui.login.forgotPassword'/></g:link>
 

@@ -16,7 +16,7 @@
          </div>
      </g:hasErrors>   --%>
     <div class="row">
-        <div class="span3"></div>
+        <div class="span2"></div>
 
         <div class="span6">
             <h3><g:message code="spring.security.ui.register.description"/></h3>
@@ -31,7 +31,7 @@
                             <label for='username' class="control-label"><g:message code="user.username.label"/>:</label>
 
                             <div class="controls">
-                                <input type='text' class='span4' name='username' id='username'
+                                <input type='text' class='span2' name='username' id='username'
                                        bean="${command}" value="${command.username}"/>
                                 <g:eachError bean="${command}" field="username">
                                     <span class="help-inline"><g:message error="${it}"/></span>
@@ -44,7 +44,7 @@
                             <label for='email' class="control-label"><g:message code="user.email.label"/>:</label>
 
                             <div class="controls">
-                                <input type='email' class='span4' name='email' id='email'
+                                <input type='email' class='span2' name='email' id='email'
                                        bean="${command}" value="${command.email}"/>
                                 <g:eachError bean="${command}" field="email">
                                     <span class="help-inline"><g:message error="${it}"/></span>
@@ -56,7 +56,7 @@
                             <label for='password' class="control-label"><g:message code="user.password.label"/>:</label>
 
                             <div class="controls">
-                                <input class='span4' name='password' id='password'
+                                <input class='span2' name='password' id='password'
                                        bean="${command}" value="${command.password}" type='password'/>
                                 <g:eachError bean="${command}" field="password">
                                     <span class="help-inline"><g:message error="${it}"/></span>
@@ -69,7 +69,7 @@
                                     code="user.password2.label"/>:</label>
 
                             <div class="controls">
-                                <input class='span4' name='password2' id='password2'
+                                <input class='span2' name='password2' id='password2'
                                        bean="${command}" value="${command.password2}" type='password'/>
                                 <g:eachError bean="${command}" field="password2">
                                     <span class="help-inline"><g:message error="${it}"/></span>

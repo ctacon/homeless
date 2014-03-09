@@ -65,13 +65,12 @@
 </div>
 
 <!-- Enable to overwrite Footer by individual page -->
-<%--	<g:if test="${ pageProperty(name:'page.footer') }">
-	    <g:pageProperty name="page.footer" />
-	</g:if>
-	<g:else>
+	%{--<g:if test="${ pageProperty(name:'page.footer') }">--}%
+	    %{--<g:pageProperty name="page.footer" />--}%
+	%{--</g:if>--}%
+	%{--<g:else>--}%
 		<g:render template="/layouts/footer"/>
-	</g:else>    --%>
-
+	%{--</g:else>    --}%
 <!-- Enable to insert additional components (e.g., modals, javascript, etc.) by any individual page -->
 %{--<g:if test="${pageProperty(name: 'page.include.bottom')}">--}%
 %{--<g:pageProperty name="page.include.bottom"/>--}%

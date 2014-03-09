@@ -21,9 +21,9 @@ class BootStrap {
                 username: 'admin',
                 password: 'admin',
                 email: 'ctacon183@gmail.com',
-                enabled: true,
-                avatar: superAdminAvatar)
-                .save(failOnError: true)
+                enabled: true)
+        superAdminUser.profile.setAvatar(superAdminAvatar)
+        superAdminUser.save(failOnError: true)
 
         if (!superAdminUser.authorities.contains(adminRole)) {
             ru.homeless.security.UserRole.create superAdminUser, adminRole

@@ -9,11 +9,11 @@
 
 <section id="intro" class="first">
     <div class="row">
-        <div class="span3 nav nav-list" data-spy="affix">
-            <li ><a href="#info">О НАС<i class="icon-chevron-right pull-right"></i></a></li>
-            <li ><a href="#choose_friend">ВЫБРАТЬ ДРУГА<i class="icon-chevron-right pull-right"></i></a></li>
-            <li ><a href="#help">КАК ПОМОЧЬ<i class="icon-chevron-right pull-right"></i></a></li>
-            <li ><a href="#community">СОВЕТ ПОПЕЧИТЕЛЕЙ<i class="icon-chevron-right pull-right"></i></a></li>
+        <div class="span2 nav nav-list" style="width: 220px;" data-spy="affix">
+            <li ><a href="#info"><g:message code="menu.help.aboutus.label" /><i class="icon-chevron-right pull-right"></i></a></li>
+            <li ><a href="#choose_friend"><g:message code="menu.help.choose.friend.label" /><i class="icon-chevron-right pull-right"></i></a></li>
+            <li ><a href="#help"><g:message code="menu.help.help.label" /><i class="icon-chevron-right pull-right"></i></a></li>
+            <li ><a href="#community"><g:message code="menu.help.community.label" /><i class="icon-chevron-right pull-right"></i></a></li>
 
         </div>
 

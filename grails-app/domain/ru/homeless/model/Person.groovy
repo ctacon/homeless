@@ -8,26 +8,25 @@ import ru.homeless.security.User
  * A domain class describes the data object and it's mapping to the database
  */
 class Person extends User {
-    Photo avatar
     Long uid
     String fullName
 
     String provider
     String accessToken
+    PersonProfile profile = new PersonProfile()
 
-    /* Default (injected) attributes of GORM */
-//	Long	id
-//	Long	version
+	Date	dateCreated
+	Date	lastUpdated
 
-    /* Automatic timestamping of GORM */
-//	Date	dateCreated
-//	Date	lastUpdated
+
+    static belongsTo = [profile: PersonProfile]
+
 
     static mapping = {
+        profile cascade: 'all'
     }
 
     static constraints = {
-        avatar nullable: true
         uid unique: true, nullable: true
         accessToken nullable: true, unique: true
         provider nullable: true
@@ -39,16 +38,11 @@ class Person extends User {
         return fullName == null || fullName.isEmpty() ? username : fullName;
     }
 
-    /*
-     * Methods of the Domain Class
-     */
-
 
     @Override
     public java.lang.String toString() {
         return "Person{" +
                 "id=" + id +
-                ", avatar=" + avatar +
                 ", uid=" + uid +
                 '}';
     }

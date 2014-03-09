@@ -35,6 +35,10 @@ class AnimalController {
         [animalInstanceList: animalList, animalInstanceTotal: Animal.count()]
     }
 
+    def forwardToAnimalList(){
+        render (view: "list_filter")
+    }
+
 
     def create() {
         [animalInstance: new Animal(params)]

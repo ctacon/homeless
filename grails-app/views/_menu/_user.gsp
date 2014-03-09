@@ -7,16 +7,17 @@
                 code='security.signin.label'/></g:link>
     </sec:ifNotGranted>
     <sec:ifAnyGranted roles="ROLE_USER,ROLE_FACEBOOK">
-        ${personInstance?.getLoggedInName()}
+        <a href="${createLink(controller: "person", action: 'index')}">${personInstance?.getLoggedInName()}</a>
+
         <g:link controller='logout' action='index'>
             <g:message code="security.signoff.label"
                        default="LogOut"/></g:link>
     </sec:ifAnyGranted>
 
-    %{--<s2o:ifLoggedInWith provider="facebook">facebook yes</s2o:ifLoggedInWith>--}%
-    %{--<s2o:ifNotLoggedInWith provider="facebook">facebook no</s2o:ifNotLoggedInWith>--}%
-    %{--<s2o:ifLoggedInWith provider="vkontakte">yes</s2o:ifLoggedInWith>--}%
-    %{--<s2o:ifNotLoggedInWith provider="vkontakte">no</s2o:ifNotLoggedInWith>--}%
+%{--<s2o:ifLoggedInWith provider="facebook">facebook yes</s2o:ifLoggedInWith>--}%
+%{--<s2o:ifNotLoggedInWith provider="facebook">facebook no</s2o:ifNotLoggedInWith>--}%
+%{--<s2o:ifLoggedInWith provider="vkontakte">yes</s2o:ifLoggedInWith>--}%
+%{--<s2o:ifNotLoggedInWith provider="vkontakte">no</s2o:ifNotLoggedInWith>--}%
 
 </ul>
 

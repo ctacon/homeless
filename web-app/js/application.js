@@ -12,6 +12,9 @@
 //
 
 var $loading = $('#spinner').hide();
+function hideSpinner() {
+    $('#spinner').hide();
+}
 $(document)
     .ajaxStart(function () {
         $loading.show();
