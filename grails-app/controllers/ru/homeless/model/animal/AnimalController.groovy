@@ -186,8 +186,8 @@ class AnimalController {
                     results << [
                             avatarid: picture.id,
                             name: picture.originalFilename,
-                            thumbnail_url: createLink(controller: 'Photo', action: 'thumbnail', id: picture.id),
-                            url: createLink(controller: 'Photo', action: 'picture', id: picture.id),
+                            thumbnail_url: createLink(controller: 'photo', action: 'thumbnail', id: picture.id),
+                            url: createLink(controller: 'photo', action: 'picture', id: picture.id),
                             size: picture.fileSize
                     ]
 

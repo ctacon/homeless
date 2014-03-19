@@ -8,12 +8,13 @@
 
 <section id="login" class="first">
     <div class="row">
-        <div class="span3"></div>
+        %{--<div class="span1"></div>--}%
 
-        <div class="span8">
-            <h3 class="offset3"><g:message code="springSecurity.login.header"/></h3>
+        <div class="span6">
 
-            <form id='loginForm' class='form-horizontal offset1' action='${postUrl}' method='POST' autocomplete='on'>
+
+            <form id='loginForm' class='form-horizontal' action='${postUrl}' method='POST' autocomplete='on'>
+                <legend><g:message code="springSecurity.login.header"/></legend>
                 <input name="_spring_security_remember_me" id="remember-me" value="1" type="hidden">
 
                 <div class="controls">

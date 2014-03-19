@@ -99,9 +99,18 @@ class PhotoController {
         try {
             def pic = Photo.get(params.id)
             if (pic != null) {
-                File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.newFilename}")
-                picFile.withInputStream { is ->
-                    response.outputStream << is
+
+                File picFile = new File(pic.folder, pic.newFilename)
+                if (picFile.exists()) {
+                    picFile.withInputStream { is ->
+                        try {
+                            response.outputStream << is
+                        } finally {
+                            if (is) is.close()
+                        }
+                    }
+                } else {
+                    log.error('File not found name = ' + picFile.name)
                 }
             }
             response.contentType = 'image/jpeg'
@@ -115,9 +124,17 @@ class PhotoController {
         try {
             def pic = Photo.get(params.id)
             if (pic != null) {
-                File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.thumbnailFilename}")
-                picFile.withInputStream { is ->
-                    response.outputStream << is
+                File picFile = new File(pic.folder, pic.thumbnailFilename)
+                if (picFile.exists()) {
+                    picFile.withInputStream { is ->
+                        try {
+                            response.outputStream << is
+                        } finally {
+                            if (is) is.close()
+                        }
+                    }
+                } else {
+                    log.error('File not found name = ' + picFile.name)
                 }
             }
             response.contentType = 'image/png'
@@ -133,9 +150,9 @@ class PhotoController {
         try {
             def pic = Photo.get(params.id)
             if (pic) {
-                File picFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.newFilename}")
+                File picFile = new File(pic.folder, pic.newFilename)
                 picFile.delete()
-                File thumbnailFile = new File("${grailsApplication.config.file.upload.directory ?: '/tmp'}/${pic.thumbnailFilename}")
+                File thumbnailFile = new File(pic.folder, pic.thumbnailFilename)
                 thumbnailFile.delete()
                 pic.delete(flash: true)
                 result = [success: true]

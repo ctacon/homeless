@@ -12,6 +12,7 @@ class Photo {
     String originalFilename
     String thumbnailFilename
     String newFilename
+    String folder
     long fileSize
     boolean deleted
     boolean avatar

@@ -20,4 +20,5 @@ modules = {
         resource url:'/bootstrap-Image-Gallery-3.1.0/js/bootstrap-image-gallery.min.js'
         resource url:'/gallery-master/js/blueimp-gallery.min.js'
     }
+
 }

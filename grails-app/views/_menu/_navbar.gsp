@@ -8,14 +8,14 @@
             %{--<span class="icon-bar"></span>--}%
             %{--</a>--}%
 
-            <a class="brand" href="${createLink(uri: '/')}">
-                <img class="logo"
+            %{--<a class="brand" href="${createLink(uri: '/')}">--}%
+                %{--<img class="logo"--}%
                 %{--src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'kickstart/img', file: 'grails.png')}"--}%
-                     src="${resource(dir: 'images', file: 'icon.png')}"
-                     alt="${meta(name: 'app.name')}"/>
-                ${meta(name: 'app.name')}
-                <small>v${meta(name: 'app.version')}</small>
-            </a>
+                     %{--src="${resource(dir: 'images', file: 'icon.png')}"--}%
+                     %{--alt="${meta(name: 'app.name')}"/>--}%
+                %{--${meta(name: 'app.name')}--}%
+                %{--<small>v${meta(name: 'app.version')}</small>--}%
+            %{--</a>--}%
 
 
             <ul class="nav">

@@ -6,7 +6,6 @@
     <meta name="layout" content="homeless_layout"/>
     <g:set var="entityName" value="${message(code: 'animal.label', default: 'Питомцы')}"/>
     <title><g:message code="default.list.label" args="[entityName]"/></title>
-    %{--<jqui:resources/>--}%
     <r:require module="jquery-ui"/>
     <g:javascript plugin="remote-pagination" src="remoteNonStopPageScroll.js"/>
 </head>
@@ -21,7 +20,8 @@
             <g:render template="filter_panel"/>
         </div>
 
-        <div class="span6 offset1">
+        <div class="span6"
+             style="margin-left: 50px">
             <div id="animal-list">
             </div>
         </div>

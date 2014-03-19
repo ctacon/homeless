@@ -29,12 +29,14 @@
     <g:layoutHead/>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    %{--[if lt IE 9]>--}%
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 
-	<![endif]-->
+
+    %{--<![endif]--}%
 
     <%-- For Javascript see end of body --%>
+
 </head>
 
 <body>
@@ -44,7 +46,7 @@
 
     <g:if test="${!pageProperty(name: 'page.navigation')}">
         <g:render template="/_menu/navigationmenu"/>
-        %{--<g:pageProperty name="page.navigation"/>--}%
+    %{--<g:pageProperty name="page.navigation"/>--}%
     </g:if>
     <g:else>
 
@@ -65,12 +67,12 @@
 </div>
 
 <!-- Enable to overwrite Footer by individual page -->
-	%{--<g:if test="${ pageProperty(name:'page.footer') }">--}%
-	    %{--<g:pageProperty name="page.footer" />--}%
-	%{--</g:if>--}%
-	%{--<g:else>--}%
-		<g:render template="/layouts/footer"/>
-	%{--</g:else>    --}%
+%{--<g:if test="${ pageProperty(name:'page.footer') }">--}%
+%{--<g:pageProperty name="page.footer" />--}%
+%{--</g:if>--}%
+%{--<g:else>--}%
+<g:render template="/layouts/footer"/>
+%{--</g:else>    --}%
 <!-- Enable to insert additional components (e.g., modals, javascript, etc.) by any individual page -->
 %{--<g:if test="${pageProperty(name: 'page.include.bottom')}">--}%
 %{--<g:pageProperty name="page.include.bottom"/>--}%
@@ -86,6 +88,7 @@
     <g:img dir="images" file="spinner.gif"/>
 </div>
 <r:layoutResources/>
+
 </body>
 
 </html>
@@ -93,5 +96,12 @@
 <style>
 body {
     padding-top: 40px;
+
 }
+
+
+
+
+
+
 </style>

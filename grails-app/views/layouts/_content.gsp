@@ -1,15 +1,7 @@
 <div id="Content" class="container">
 
 <!-- print system messages (infos, warnings, etc) - not validation errors -->
-    <g:if test="${flash.message && !layout_noflashmessage}">
-        <div class="alert alert-info">${flash.message}</div>
-    </g:if>
-    <g:if test="${flash.error && !layout_noflashmessage}">
-        <div class="alert alert-error">${flash.error}</div>
-    </g:if>
-    <g:if test="${flash.warning && !layout_noflashmessage}">
-        <div class="alert alert-warning">${flash.warning}</div>
-    </g:if>
+<g:render template="/layouts/content_messages"/>
 
 
 <!-- Show page's content -->
