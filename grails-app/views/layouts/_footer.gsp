@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="span1">
+            <div class="span2">
                 <img class="logo"
                      src="${resource(dir: 'images', file: 'icon.png')}"
                      alt="${meta(name: 'app.name')}"/>

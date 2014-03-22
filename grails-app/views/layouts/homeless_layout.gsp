@@ -40,8 +40,11 @@
 </head>
 
 <body>
+
 <div class="container">
+
     <g:render template="/_menu/navbar"/>
+
 
 
     <g:if test="${!pageProperty(name: 'page.navigation')}">
@@ -79,7 +82,7 @@
 %{--</g:if>--}%
 %{--<g:else>--}%
 <!-- Insert a modal dialog for registering (for an open site registering is possible on any page) -->
-%{--<g:render template="/_common/modals/registerDialog" model="[item: item]"/>--}%
+<g:render template="/_common/modals/loginDialog" />
 %{--</g:else>--}%
 
 <!-- Included Javascript files and other resources -->
@@ -95,8 +98,8 @@
 
 <style>
 body {
-    padding-top: 40px;
-
+    /*padding-top: 40px;*/
+    min-width: 750px;
 }
 
 

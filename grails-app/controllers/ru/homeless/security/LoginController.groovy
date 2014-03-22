@@ -134,9 +134,15 @@ class LoginController {
             } else {
                 render([])
             }
-        }catch (Exception ex){
+        } catch (Exception ex) {
 //            log.error(ex,ex)
-             render()
+            render()
         }
     }
 }
+
+
+
+
+
+

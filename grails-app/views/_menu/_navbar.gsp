@@ -1,4 +1,4 @@
-<div id="Navbar" class="navbar navbar-fixed-top ">
+<div id="Navbar" class="navbar ">
     <div class="navbar-inner">
         <div class="container">
 
@@ -9,80 +9,60 @@
             %{--</a>--}%
 
             %{--<a class="brand" href="${createLink(uri: '/')}">--}%
-                %{--<img class="logo"--}%
-                %{--src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'kickstart/img', file: 'grails.png')}"--}%
-                     %{--src="${resource(dir: 'images', file: 'icon.png')}"--}%
-                     %{--alt="${meta(name: 'app.name')}"/>--}%
-                %{--${meta(name: 'app.name')}--}%
-                %{--<small>v${meta(name: 'app.version')}</small>--}%
+            %{--<img class="logo"--}%
+            %{--src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'kickstart/img', file: 'grails.png')}"--}%
+            %{--src="${resource(dir: 'images', file: 'icon.png')}"--}%
+            %{--alt="${meta(name: 'app.name')}"/>--}%
+            %{--${meta(name: 'app.name')}--}%
+            %{--<small>v${meta(name: 'app.version')}</small>--}%
             %{--</a>--}%
 
 
             <ul class="nav">
-                %{--<sec:ifAnyGranted roles="ROLE_SUPER_ADMIN">--}%
-                    %{--<li class="dropdown">--}%
-                        %{--<a class="dropdown-toggle" data-toggle="dropdown" href="#">Browse <b class="caret"></b></a>--}%
-                        %{--<ul class="dropdown-menu">--}%
-                            %{--<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName }}">--}%
-                                %{--<li class="controller">--}%
-                                    %{--<g:link controller="${c.logicalPropertyName}">--}%
-                                        %{--<g:if test="${c.fullName.contains('HomeController')}">--}%
-                                            %{--<i class="icon-home"></i>--}%
-                                        %{--</g:if>--}%
-                                        %{--<g:elseif test="${c.fullName.contains('DemoPageController')}">--}%
-                                            %{--<i class="icon-beaker"></i>--}%
-                                        %{--</g:elseif>--}%
-                                        %{--${c.fullName.substring(c.fullName.lastIndexOf('.') + 1)}--}%
-                                    %{--</g:link>--}%
-                                %{--</li>--}%
-                            %{--</g:each>--}%
-                        %{--</ul>--}%
-                    %{--</li>--}%
-                %{--</sec:ifAnyGranted>--}%
-                <li><a href="${createLink(controller: "Animal", action: "list")}">Животные</a></li>
-                <li><a href="${createLink(controller: "home", action: 'help')}">О нас</a></li>
+                <li><a href="${createLink(controller: "Animal", action: "list")}"><g:message code="menu.animal.label" /></a></li>
+                <li><a href="${createLink(controller: "home", action: 'help')}"><g:message code="menu.info.label" /></a></li>
                 <sec:ifAnyGranted roles="ROLE_ADMIN">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Справочники<b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><g:message code="menu.dirrectory.label" /><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="controller">
                                 <g:link controller="animalType">
-                                    Вид животного
+                                    <g:message code="menu.info.animal.type.label" />
                                 </g:link>
                             </li>
                             <li class="controller">
                                 <g:link controller="animalStatus">
-                                    Состояние животного
+                                    <g:message code="menu.info.animal.helf.label" />
                                 </g:link>
                             </li>
                             <li class="controller">
                                 <g:link controller="animalSex">
-                                    Пол животного
+                                    <g:message code="menu.info.animal.sex.label" />
                                 </g:link>
                             </li>
                             <li class="controller">
                                 <g:link controller="animalPlace">
-                                    Место животного
+                                    <g:message code="menu.info.animal.place.label" />
                                 </g:link>
                             </li>
                             <li class="controller">
                                 <g:link controller="animalHair">
-                                    Шерсть животного
+                                    <g:message code="menu.info.animal.hear.label" />
                                 </g:link>
                             </li>
                             <li class="controller">
                                 <g:link controller="animalColor">
-                                    Цвет животного
+                                    <g:message code="menu.info.animal.color.label" />
                                 </g:link>
                             </li>
                             <li class="controller">
                                 <g:link controller="animalCharacter">
-                                    Характер животного
+                                    <g:message code="menu.info.animal.character.label" />
                                 </g:link>
                             </li>
                             <li class="controller">
                                 <g:link controller="personPostType">
-                                    Должность пользователя
+                                    <g:message code="menu.info.person.post.label" />
                                 </g:link>
                             </li>
                         </ul>
@@ -90,13 +70,10 @@
                 </sec:ifAnyGranted>
             </ul>
 
-            <div class="pull-left">
-            </div>
+            %{--<div class="pull-left">--}%
+            %{--</div>--}%
 
-            <div class="pull-right">
-                <g:render
-                        template="/_menu/user"/>
-            </div>
+            <g:render template="/_menu/user"/>
         </div>
     </div>
 </div>

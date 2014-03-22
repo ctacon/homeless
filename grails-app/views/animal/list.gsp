@@ -16,12 +16,11 @@
         <g:link class="btn btn-primary" action="create"><g:message code="animal.new.label"/></g:link>
     </sec:ifLoggedIn>
     <div class="row">
-        <div class="span2" style="width: 200px">
+        <div class="span2" style="width: 200px;margin-right: 20px">
             <g:render template="filter_panel"/>
         </div>
 
-        <div class="span6"
-             style="margin-left: 50px">
+        <div class="span7">
             <div id="animal-list">
             </div>
         </div>

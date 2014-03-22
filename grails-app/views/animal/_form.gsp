@@ -1,30 +1,5 @@
 <%@ page import="ru.homeless.model.Photo; ru.homeless.model.animal.Animal" %>
 
-%{--<div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'avatar', 'error')} ">--}%
-%{--<label for="fileupload" class="control-label"><g:message code="animal.avatar.label" default="Аватар"/></label>--}%
-%{--<g:hiddenField id="avatar" name="avatar.id" value="${animalInstance?.avatar?.id}"/>--}%
-%{--<ul class="thumbnails">--}%
-%{--<li class="span2">--}%
-%{--<div class="thumbnail">--}%
-%{--<img id="avatarthumbnail" data-src="holder.js/150%x150"--}%
-%{--alt="${animalInstance?.avatar?.thumbnailFilename}"--}%
-%{--src="${animalInstance?.avatar ?--}%
-%{--createLink(controller: 'Photo', action: 'thumbnail', id: animalInstance.avatar.id)--}%
-%{--: avatar && avatar.id ? createLink(controller: 'Photo', action: 'thumbnail', id: avatar.id)--}%
-%{--: resource(dir: 'images', file: 'cat.jpg')}">--}%
-%{--</div>--}%
-%{--</li>--}%
-%{--</ul>--}%
-
-%{--<div class="controls">--}%
-%{--<input id="fileupload" type="file" name="files[]"--}%
-%{--data-url="${createLink(controller: 'Animal', action: 'upload')}"--}%
-%{--autoUpload="true"--}%
-%{--disableImageResize="false"/>--}%
-%{--<span class="help-inline">${hasErrors(bean: animalInstance, field: 'avatar', 'error')}</span>--}%
-%{--</div>--}%
-%{--</div>--}%
-
 <div class="row" xmlns="http://www.w3.org/1999/html">
     <div class="span3">
         <div class="control-group fieldcontain ${hasErrors(bean: animalInstance, field: 'type', 'error')} required">
@@ -36,7 +11,7 @@
 
                           name="type.id" from="${ru.homeless.model.animal.AnimalType.list()}" optionKey="id"
                           required="" value="${animalInstance?.type?.id}"
-                          class="input-large"/>
+                          class="span2"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'type', 'error')}</span>
             </div>
         </div>
@@ -52,8 +27,8 @@
 
             <div class="controls">
                 <g:textField name="name"
-                             class="input-large"
-                             style="height: 30px;"
+                             class="span2"
+                             style="height: 30px;width: 63%"
                              maxlength="50" required="" value="${animalInstance?.name}"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'name', 'error')}</span>
             </div>
@@ -68,7 +43,7 @@
             <div class="controls">
                 <g:select id="sex" name="sex.id" from="${ru.homeless.model.animal.AnimalSex.list()}" optionKey="id"
                           required=""
-                          value="${animalInstance?.sex?.id}" class="input-large"/>
+                          value="${animalInstance?.sex?.id}" class="span2"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'animalFilterSex', 'error')}</span>
             </div>
         </div>
@@ -117,7 +92,8 @@
                 %{--value="${animalInstance?.color}"/>--}%
                 <g:select id="color" name="color.id"
                           from="${ru.homeless.model.animal.AnimalColor.list()}"
-                          optionKey="id" value="${animalInstance?.color?.id}" class="input-large"
+                          optionKey="id" value="${animalInstance?.color?.id}"
+                          class="span2"
                           noSelection="['null': '']"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'color', 'error')}</span>
             </div>
@@ -132,7 +108,8 @@
             <div class="controls">
                 <g:select id="character" name="character.id"
                           from="${ru.homeless.model.animal.AnimalCharacter.list()}"
-                          optionKey="id" value="${animalInstance?.character?.id}" class="input-large"
+                          optionKey="id" value="${animalInstance?.character?.id}"
+                          class="span2"
                           noSelection="['null': '']"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'character', 'error')}</span>
             </div>
@@ -147,7 +124,8 @@
             <div class="controls">
                 <g:select id="hair" name="hair.id"
                           from="${ru.homeless.model.animal.AnimalHair.list()}"
-                          optionKey="id" value="${animalInstance?.hair?.id}" class="input-large"
+                          optionKey="id" value="${animalInstance?.hair?.id}"
+                          class="span2"
                           noSelection="['null': '']"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'hair', 'error')}</span>
             </div>
@@ -163,7 +141,7 @@
                                                                       default="Description"/></label>
 
             <div class="controls">
-                <g:textArea class="input-xxlarge" name="description" value="${animalInstance?.description}" rows="5"/>
+                <g:textArea class="span6" name="description" value="${animalInstance?.description}" rows="5"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'description', 'error')}</span>
             </div>
         </div>
@@ -240,7 +218,7 @@
             <div class="controls">
                 <g:select id="place" name="place.id" from="${ru.homeless.model.animal.AnimalPlace.list()}"
                           optionKey="id" required="" value="${animalInstance?.place?.id}"
-                          class="input-large"/>
+                          class="span2"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'place', 'error')}</span>
             </div>
         </div>
@@ -253,7 +231,7 @@
             <div class="controls">
                 <g:select id="status" name="status.id" from="${ru.homeless.model.animal.AnimalStatus.list()}"
                           optionKey="id" required="" value="${animalInstance?.status?.id}"
-                          class="input-large"/>
+                          class="span2"/>
                 <span class="help-inline">${hasErrors(bean: animalInstance, field: 'animalFilterStatus', 'error')}</span>
             </div>
         </div>
@@ -308,25 +286,6 @@
 
 <script>
     $(document).ready((function () {
-//        $('#fileupload').fileupload({
-//            dataType: 'json',
-//            disableImageResize: /Android(?!.*Chrome)|Opera/
-//                    .test(window.navigator && navigator.userAgent),
-//            imageMaxWidth: 150,
-//            imageMaxHeight: 150,
-//            imageCrop: true,
-//            replaceFileInput: false,
-//            add: function (e, data) {
-//                data.submit();
-//            },
-//            done: function (e, data) {
-//                $.each(data.result.files, function (index, file) {
-//                    $('#avatar').val(file.avatarid);
-//                    $("#avatarthumbnail").attr("src", file.thumbnail_url);
-//                });
-//
-//            }
-//        });
         $('#albumfileupload').fileupload({
             dataType: 'json',
             disableImageResize: /Android(?!.*Chrome)|Opera/

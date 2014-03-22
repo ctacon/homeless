@@ -23,3 +23,5 @@ $(document)
         $loading.hide();
     })
 ;
+
+$('.btn-dropdown').dropdown();

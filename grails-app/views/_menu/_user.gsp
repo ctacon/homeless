@@ -1,24 +1,76 @@
-<ul class="nav pull-right">
-    <sec:ifNotGranted roles="ROLE_USER">
+<ul id="auth_block" class="nav pull-right ">
+    <li>
+        <sec:ifNotGranted roles="ROLE_USER">
+            <div class="btn-group">
+                <button  class="btn btn-success dropdown-toggle btn-dropdown" data-toggle="dropdown" href="#">
+                    <g:message code='security.signin.label'/>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="container">
+                            через
+                            <oauth:connect provider="facebook"
+                                           id="facebook-connect-link">
+                                <img width="100"
+                                     src="${resource(dir: 'images/auth/', file: 'f-3.jpg')}"/>
+                            </oauth:connect>
+                        </div>
+                    </li>
 
-        <s2ui:linkButton class="btn btn-link" elementId='register' controller='register'
-                         messageCode='spring.security.ui.login.register'/>
-        <g:link class="btn btn-success" controller='login' action='auth' elementId='login'><g:message
-                code='security.signin.label'/></g:link>
-    </sec:ifNotGranted>
-    <sec:ifAnyGranted roles="ROLE_USER,ROLE_FACEBOOK">
-        <a href="${createLink(controller: "person", action: 'index')}">${personInstance?.getLoggedInName()}</a>
+                    <li>
+                        <div class="container btn btn-link">
+                            через
+                            <oauth:connect provider="vkontakte" id="vkontakte-connect-link">
+                                <img width="100" src="${resource(dir: 'images/auth/', file: 'vk.png')}"/>
+                            </oauth:connect>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#LoginModal">Есть аккаунт</a>
+                    </li>
 
-        <g:link controller='logout' action='index'>
-            <g:message code="security.signoff.label"
-                       default="LogOut"/></g:link>
-    </sec:ifAnyGranted>
+                    <li class="divider"/>
+                    <li>
+                        <div class="container">
+                            <a elementId="register"
+                               href="${createLink(controller: "register", action: "index")}">
+                                <g:message code='spring.security.ui.login.register'/>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-%{--<s2o:ifLoggedInWith provider="facebook">facebook yes</s2o:ifLoggedInWith>--}%
-%{--<s2o:ifNotLoggedInWith provider="facebook">facebook no</s2o:ifNotLoggedInWith>--}%
-%{--<s2o:ifLoggedInWith provider="vkontakte">yes</s2o:ifLoggedInWith>--}%
-%{--<s2o:ifNotLoggedInWith provider="vkontakte">no</s2o:ifNotLoggedInWith>--}%
+        </sec:ifNotGranted>
+        <sec:ifAnyGranted roles="ROLE_USER,ROLE_FACEBOOK">
+            <div class="btn-group">
+                <button  class="btn btn-info dropdown-toggle  btn-dropdown" data-toggle="dropdown" href="#">
+                    ${personInstance?.getLoggedInName()}
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="${createLink(controller: "person", action: 'index')}">
+                            <g:message code="menu.user.myanimal.label"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="${createLink(controller: "person", action: 'index', params: [edit_profile: "true"])}">
+                            <g:message code="manu.user.editprofile.label"/>
+                        </a>
+                    </li>
 
+                    <li>
+                        <g:link controller='logout' action='index'>
+                            <g:message code="security.signoff.label" default="LogOut"/>
+                        </g:link>
+                    </li>
+                </ul>
+            </div>
+
+        </sec:ifAnyGranted>
+    </li>
 </ul>
 
 

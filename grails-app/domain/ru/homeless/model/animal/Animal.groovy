@@ -61,7 +61,7 @@ class Animal {
     }
 
     public String getShortDescription() {
-        int count = 50;
+        int count = 250;
         String shortDesc = description
         if (shortDesc != null && shortDesc.length() > count) {
             shortDesc = description.substring(0, count)
@@ -71,11 +71,4 @@ class Animal {
         return String.format("%-" + count + "s", shortDesc);
     }
 
-/*
-     * Methods of the Domain Class
-     */
-//	@Override	// Override toString for a nicer / more descriptive UI 
-//	public String toString() {
-//		return "${name}";
-//	}
 }
