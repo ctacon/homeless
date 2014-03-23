@@ -2,27 +2,25 @@
     <li>
         <sec:ifNotGranted roles="ROLE_USER">
             <div class="btn-group">
-                <button  class="btn btn-success dropdown-toggle btn-dropdown" data-toggle="dropdown" href="#">
+                <button class="btn btn-success dropdown-toggle btn-dropdown" data-toggle="dropdown" href="#">
                     <g:message code='security.signin.label'/>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <li>
                         <div class="container">
-                            через
-                            <oauth:connect provider="facebook"
-                                           id="facebook-connect-link">
-                                <img width="100"
-                                     src="${resource(dir: 'images/auth/', file: 'f-3.jpg')}"/>
+                        %{--через--}%
+                            <oauth:connect provider="facebook" id="facebook-connect-link">
+                                <img src="${resource(dir: 'images/auth/', file: 'fb_new.png')}"/>
                             </oauth:connect>
                         </div>
                     </li>
 
                     <li>
-                        <div class="container btn btn-link">
-                            через
+                        <div class="container">
+                        %{--через--}%
                             <oauth:connect provider="vkontakte" id="vkontakte-connect-link">
-                                <img width="100" src="${resource(dir: 'images/auth/', file: 'vk.png')}"/>
+                                <img src="${resource(dir: 'images/auth/', file: 'vk_new.png')}"/>
                             </oauth:connect>
                         </div>
                     </li>
@@ -45,7 +43,7 @@
         </sec:ifNotGranted>
         <sec:ifAnyGranted roles="ROLE_USER,ROLE_FACEBOOK">
             <div class="btn-group">
-                <button  class="btn btn-info dropdown-toggle  btn-dropdown" data-toggle="dropdown" href="#">
+                <button class="btn btn-info dropdown-toggle  btn-dropdown" data-toggle="dropdown" href="#">
                     ${personInstance?.getLoggedInName()}
                     <span class="caret"></span>
                 </button>

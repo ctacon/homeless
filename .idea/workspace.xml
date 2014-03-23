@@ -2,50 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef8acd00-3824-4f32-a666-91b45816a7ff" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_cs_CZ.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_da.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_de.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_es.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_fr.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_it.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_ja.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_nb.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_nl.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pl.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pt_BR.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pt_PT.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_sv.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_th.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_zh_CN.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/Animal.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/ru/homeless/model/animal/Animal.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/ru/homeless/security/LoginController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/ru/homeless/security/LoginController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/_form.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/js/application.js" afterPath="$PROJECT_DIR$/web-app/js/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/edit.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/edit.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/homeless_layout.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/homeless_layout.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/animal/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/animal/list.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/list.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/list.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/show.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="homeless.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395277135357" ignored="false" />
+    <file path="/Dummy.txt" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395471306608" ignored="false" />
     <file path="/a.dummy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395465081892" ignored="false" />
     <file path="/kickstart.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384796194156" ignored="false" />
     <file path="/LoginController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395398132336" ignored="false" />
     <file path="/UrlMappings.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1388918156476" ignored="false" />
     <file path="/Config.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1390135552910" ignored="false" />
-    <file path="/BootStrap.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1394030064694" ignored="false" />
-    <file path="/_user.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395468226411" ignored="false" />
+    <file path="/BootStrap.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395555026980" ignored="false" />
+    <file path="/_user.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395556894282" ignored="false" />
     <file path="/LogoutController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384265964948" ignored="false" />
-    <file path="/RegisterController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395230927596" ignored="false" />
+    <file path="/RegisterController.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395560867357" ignored="false" />
     <file path="/User.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385282439897" ignored="false" />
     <file path="/auth.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395393078571" ignored="false" />
-    <file path="/index.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385890805098" ignored="false" />
+    <file path="/index.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395558671943" ignored="false" />
     <file path="/_content.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395045670439" ignored="false" />
     <file path="/index.spring.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384668499580" ignored="false" />
     <file path="/resetPassword.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1384674072265" ignored="false" />
@@ -83,20 +66,20 @@
     <file path="/AnimalCharacter.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385473730359" ignored="false" />
     <file path="/AnimalStatus.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385475158294" ignored="false" />
     <file path="/AmimalPlace.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385476556357" ignored="false" />
-    <file path="/list.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395295537210" ignored="false" />
+    <file path="/list.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395515796862" ignored="false" />
     <file path="/main.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1388732694036" ignored="false" />
     <file path="/nextSteps.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1385890989057" ignored="false" />
     <file path="/PhotoService.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395124708675" ignored="false" />
     <file path="/AnimalSpec.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1386682953934" ignored="false" />
     <file path="/_image_list.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1391006759325" ignored="false" />
-    <file path="/_navbar.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395464928160" ignored="false" />
+    <file path="/_navbar.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395561064589" ignored="false" />
     <file path="/_image.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1391002049887" ignored="false" />
     <file path="/ApplicationResources.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395041940107" ignored="false" />
     <file path="/sessionFactory" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1388919670189" ignored="false" />
     <file path="/_galery_template.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1388833696834" ignored="false" />
-    <file path="/homeless_layout.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395388978979" ignored="false" />
-    <file path="/messages.properties" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395470770507" ignored="false" />
-    <file path="/show.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395463820153" ignored="false" />
+    <file path="/homeless_layout.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395558228301" ignored="false" />
+    <file path="/messages.properties" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395560978683" ignored="false" />
+    <file path="/show.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395559186376" ignored="false" />
     <file path="/spring-security-core.properties" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1389009356637" ignored="false" />
     <file path="/messages.spring-security-ui.properties" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1389010260287" ignored="false" />
     <file path="/_comment_group.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1394030346354" ignored="false" />
@@ -119,7 +102,7 @@
     <file path="/AnimalService.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1393426283021" ignored="false" />
     <file path="/_filter_panel.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395380840558" ignored="false" />
     <file path="$PROJECT_DIR$/web-app/jQuery-File-Upload-9.5.0/js/main.js" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1391696577681" ignored="false" />
-    <file path="/list_filter.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395308423379" ignored="false" />
+    <file path="/list_filter.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395557874770" ignored="false" />
     <file path="$PROJECT_DIR$/test/unit/ru/homeless/model/animal/AnimalColorSpec.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1391923691710" ignored="false" />
     <file path="/AnimalColor.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1391923697451" ignored="false" />
     <file path="/AnimalSearchFilter.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1391924651091" ignored="false" />
@@ -147,6 +130,8 @@
     <file path="/_form_pass.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395230982968" ignored="false" />
     <file path="/_loginDialog.gsp" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395462997105" ignored="false" />
     <file path="/spring-security-oauth.messages.properties" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395471168648" ignored="false" />
+    <file path="/utilities.less" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395557549527" ignored="false" />
+    <file path="/UserRole.groovy" changelist="ef8acd00-3824-4f32-a666-91b45816a7ff" time="1395560681801" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +199,17 @@
     <favorites_list name="homeless" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="_navbar.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="11" selection-start="4579" selection-end="4579" vertical-scroll-proportion="0.8113553">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -233,22 +228,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/animal/_filter_panel.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
-        <option value="$PROJECT_DIR$/web-app/css/bootstrap-custom.css" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/homeless_layout.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/ru/homeless/security/LoginController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/_common/modals/_loginDialog.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/person/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/PersonController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
-        <option value="$PROJECT_DIR$/web-app/js/application.js" />
-        <option value="$PROJECT_DIR$/grails-app/views/animal/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalHair/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalPlace/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalPlace/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalSex/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalSex/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalCharacter/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalStatus/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalStatus/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalType/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/animalType/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/personPostType/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/personPostType/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/ru/homeless/security/RegisterController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/ru/homeless/security/UserRole.groovy" />
         <option value="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
-        <option value="$PROJECT_DIR$/grails-app/i18n/spring-security-oauth.messages.properties" />
+        <option value="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
       </list>
     </option>
   </component>
@@ -873,7 +868,11 @@
       <created>1395250752287</created>
       <updated>1395250752287</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="передалал форму авторизации. поправил текстовки">
+      <created>1395471319204</created>
+      <updated>1395471319204</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -910,8 +909,10 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39907193" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28074247" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3309859" sideWeight="0.29234338" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32830626" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3309859" sideWeight="0.7204176" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955772" sideWeight="0.67169374" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955772" sideWeight="0.4013921" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -923,14 +924,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27958238" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955772" sideWeight="0.67053366" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32830626" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955772" sideWeight="0.67053366" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -976,7 +975,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="передалал форму авторизации. поправил текстовки" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -995,6 +994,7 @@
     <MESSAGE value="Настроил авторизацию вконтакте" />
     <MESSAGE value="Сделал отображение животных для пользователя" />
     <MESSAGE value="1" />
+    <MESSAGE value="передалал форму авторизации. поправил текстовки" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1050,114 +1050,106 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/image-gallery/_image_list.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/animalType/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="4" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.96886444">
+        <state line="30" column="167" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.5813953">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/ru/homeless/security/LoginController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/ru/homeless/model/PersonPostType.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="0" selection-start="4763" selection-end="4763" vertical-scroll-proportion="0.7894737">
+        <state line="6" column="6" selection-start="136" selection-end="136" vertical-scroll-proportion="-1.8">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/personPostType/list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="133" selection-start="630" selection-end="630" vertical-scroll-proportion="0.2858958">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content_messages.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/personPostType/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="193" selection-end="210" vertical-scroll-proportion="0.10544816">
+        <state line="30" column="48" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.5717916">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/homeless_layout.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/animalCharacter/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="42" selection-start="2961" selection-end="2961" vertical-scroll-proportion="0.18277681">
+        <state line="30" column="12" selection-start="1052" selection-end="1207" vertical-scroll-proportion="0.5813953">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/ru/homeless/model/PersonController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/animalCharacter/list.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="76" selection-start="886" selection-end="886" vertical-scroll-proportion="0.65789473">
+        <state line="15" column="133" selection-start="520" selection-end="641" vertical-scroll-proportion="0.2858958">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_common/modals/_loginDialog.gsp">
+    <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/controllers/grails/plugin/springsecurity/ui/RegisterController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="19" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.48538753">
+        <state line="23" column="6" selection-start="890" selection-end="890" vertical-scroll-proportion="-2.9223182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/programming/development/grails-2.3.1/src/grails-datastore-gorm-2.0.2.RELEASE-sources.jar!/org/grails/datastore/gorm/GormStaticApi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="800" column="12" selection-start="25038" selection-end="25038" vertical-scroll-proportion="0.33252132">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/controllers/grails/plugin/springsecurity/ui/RoleController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="8" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.31578946">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/ru/homeless/security/RegisterController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="65" selection-start="95" selection-end="95" vertical-scroll-proportion="0.05263158">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/ru/homeless/security/UserRole.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="8" selection-start="132" selection-end="136" vertical-scroll-proportion="0.027624309">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="254" column="73" selection-start="15906" selection-end="15906" vertical-scroll-proportion="0.8189655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="859" selection-end="859" vertical-scroll-proportion="-5.744681">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="500" selection-end="500" vertical-scroll-proportion="0.4676259">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/person/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="26" selection-start="1707" selection-end="1719" vertical-scroll-proportion="-0.08640406">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/animal/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="40" selection-start="7779" selection-end="7779" vertical-scroll-proportion="0.630749">
-          <folding>
-            <element signature="tag#div#1" expanded="false" />
-            <element signature="tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#2" expanded="false" />
-            <element signature="tag#div#4" expanded="false" />
-            <element signature="tag#div#5" expanded="false" />
-            <element signature="tag#sec:ifAnyGranted#0;tag#gsp:root#0" expanded="false" />
-            <element signature="tag#script#0" expanded="false" />
-            <marker date="1395467188000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/animal/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="55" selection-start="748" selection-end="748" vertical-scroll-proportion="0.43837357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_user.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="712" selection-end="712" vertical-scroll-proportion="0.35714287">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/i18n/spring-security-oauth.messages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="66" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.6576728">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="90" column="11" selection-start="4579" selection-end="4579" vertical-scroll-proportion="0.8113553">
           <folding />
         </state>
       </provider>

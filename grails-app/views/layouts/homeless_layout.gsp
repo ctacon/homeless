@@ -41,7 +41,7 @@
 
 <body>
 
-<div class="container">
+<div class="container" style="max-width: 970px;">
 
     <g:render template="/_menu/navbar"/>
 
