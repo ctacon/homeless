@@ -23,7 +23,7 @@ class Comment {
 //	static hasOne		= []	// tells GORM to associate another domain object as an owner in a 1-1 mapping
 //	static hasMany		= []	// tells GORM to associate other domain objects for a 1-n or n-m mapping
 //	static mappedBy		= []	// specifies which property should be used in a mapping 
-    static belongsTo = [parent: Comment, animal: Animal]
+    static belongsTo = [parent: Comment, animal: Animal, photo: Photo]
     static mapping = {
     }
 
@@ -34,6 +34,7 @@ class Comment {
         parent nullable: true
         text blank: false
         animal nullable: true
+        photo nullable: true
     }
 
     public Collection<Comment> getChildCommentsSorted() {

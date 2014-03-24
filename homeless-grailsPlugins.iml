@@ -5,30 +5,27 @@
       <configuration>
         <webroots>
           <root url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.1/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/font-awesome-resources-3.0/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.3.5/grails-app/views" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/kickstart-with-bootstrap-0.9.6/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/kickstart-with-bootstrap-0.9.6/grails-app/views" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.0.2/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-ui-1.10.3/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/mail-1.0.1/grails-app/views" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/famfamfam-1.0.1/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC2/grails-app/views" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/font-awesome-resources-3.0/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-ui-1.0-RC1/grails-app/views" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.0.2/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-ui-1.10.3/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.10.2.2/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC2/grails-app/views" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/famfamfam-1.0.1/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.3.5/grails-app/views" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-oauth-facebook-0.1/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/remote-pagination-0.4.6/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/kickstart-with-bootstrap-0.9.6/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/kickstart-with-bootstrap-0.9.6/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map>
-          <unit-entry name="Gorm" />
-          <unit-entry name="sessionFactory" />
-        </datasource-map>
+        <datasource-map />
       </configuration>
     </facet>
   </component>
@@ -134,9 +131,8 @@
     <content url="file://$MODULE_DIR$/target/work/plugins/webxml-1.4.1">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="spring-social-vkontakte-1.1.0.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.3.1" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="imgscalr-lib-4.2-javadoc" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="spring-social-vkontakte-1.1.0.RELEASE" level="project" />
@@ -179,11 +175,7 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/scribe/scribe/1.3.5/scribe-1.3.5.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.ideaLibSources/spring-security-core-3.2.0.RC1-sources.jar!/" />
-          <root url="jar://$USER_HOME$/.ideaLibSources/scribe-1.3.5-sources.jar!/" />
-          <root url="jar://$USER_HOME$/.ideaLibSources/spring-social-facebook-1.0.3.RELEASE-sources.jar!/" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

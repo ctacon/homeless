@@ -11,6 +11,9 @@
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
 import grails.plugin.springsecurity.SecurityConfigType
+import org.apache.log4j.ConsoleAppender
+import org.apache.log4j.DailyRollingFileAppender
+import org.apache.log4j.PatternLayout
 
 grails.project.groupId = homeless // change this to alter the default package name and Maven publishing destination
 
@@ -101,21 +104,71 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://bezdomishi.ru"
     }
 }
 
 // log4j configuration
+//log4j
+def log4jConsoleLogLevel = Priority.DEBUG
+def log4jAppFileLogLevel = Priority.INFO
+
+environments {
+    development {
+        log4jConsoleLogLevel = Priority.DEBUG
+        log4jAppFileLogLevel = Priority.DEBUG
+    }
+}
 log4j = {
-    // Example of changing the log pattern for the default console appender:
-    //
     appenders {
-        console name: 'stdout', layout: pattern(conversionPattern: '%c{2} %m%n')
+        appender new ConsoleAppender(name: "stdout",
+                threshold: log4jAppFileLogLevel,
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
+        appender new DailyRollingFileAppender(name: "model",
+                threshold: log4jAppFileLogLevel,
+                file: "/var/log/homeless/model/model.log",
+                datePattern: "'.'yyyy-MM-dd",
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
+        appender new DailyRollingFileAppender(name: "security",
+                threshold: log4jAppFileLogLevel,
+                file: "/var/log/homeless/security/security.log",
+                datePattern: "'.'yyyy-MM-dd",
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
+        appender new DailyRollingFileAppender(name: "system",
+                threshold: log4jAppFileLogLevel,
+                file: "/var/log/homeless/system/system.log",
+                datePattern: "'.'yyyy-MM-dd",
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
+        appender new DailyRollingFileAppender(name: "domain",
+                threshold: log4jAppFileLogLevel,
+                file: "/var/log/homeless/domain/domain.log",
+                datePattern: "'.'yyyy-MM-dd",
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
+        appender new DailyRollingFileAppender(name: "controller",
+                threshold: log4jAppFileLogLevel,
+                file: "/var/log/homeless/controller/controller.log",
+                datePattern: "'.'yyyy-MM-dd",
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
+        appender new DailyRollingFileAppender(name: "service",
+                threshold: log4jAppFileLogLevel,
+                file: "/var/log/homeless/service/service.log",
+                datePattern: "'.'yyyy-MM-dd",
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
+        appender new DailyRollingFileAppender(name: "systemother",
+                threshold: log4jAppFileLogLevel,
+                file: "/var/log/homeless/systemOther/systemother.log",
+                datePattern: "'.'yyyy-MM-dd",
+                layout: new PatternLayout("%d{[ dd.MM.yy HH:mm:ss.SSS]} [%t] %-5p %c %x - %m%n")
+        )
     }
-    root {
-        info 'stdout'
-        additivity = true
-    }
+
     debug 'com.the6hours', 'grails.app.taglib.com.the6hours'
     error 'org.codehaus.groovy.grails.web.servlet',        // controllers
             'org.codehaus.groovy.grails.web.pages',          // GSP
@@ -131,21 +184,44 @@ log4j = {
 
     warn 'grails.app.services.grails.plugin.springsecurity.ui.SpringSecurityUiService'
 
-    info 'ru.homeless.security.RegisterController'
+
+
+    environments {
+        development {
+            root {
+                info 'system', 'stdout'
+            }
+            debug controller: ["grails.app.controllers"],
+                    service: ["grails.app.services"],
+                    domain: ["grails.app.domain"],
+                    systemOther: ["grails.app.taglib", "grails.app.filters", "grails.app.conf"],
+                    system: ["grails.app"]
+
+        }
+        test {
+            root {
+                info 'system'
+            }
+            debug controller: ["grails.app.controllers"],
+                    service: ["grails.app.services"],
+                    domain: ["grails.app.domain"],
+                    systemOther: ["grails.app.taglib", "grails.app.filters", "grails.app.conf"],
+                    system: ["grails.app"]
+        }
+        production {
+            root {
+                error 'system'
+            }
+            info controller: ["grails.app.controllers"],
+                    service: ["grails.app.services"],
+                    domain: ["grails.app.domain"],
+                    systemOther: ["grails.app.taglib", "grails.app.filters", "grails.app.conf"]
+            error system: ["grails.app"]
+        }
+    }
+
 }
 
-//Facebook auth!!!
-//***************************************************************************************
-//grails.plugin.springsecurity.facebook.domain.classname='ru.homeless.model.Person'
-//grails.plugin.springsecurity.facebook.appId=1399516536964202
-//grails.plugin.springsecurity.facebook.secret='b31c39b8118aef13b5fb0c3d38c3e362'
-//grails.plugin.springsecurity.facebook.autoCreate.enabled=true
-//grails.plugin.springsecurity.facebook.autoCreate.roles=['ROLE_USER', 'ROLE_FACEBOOK']
-//grails.plugin.springsecurity.facebook.filter.types='redirect'
-//grails.plugin.springsecurity.facebook.filter.type='redirect'
-//grails.plugin.springsecurity.facebook.taglib.button.text='Login with Facebook'
-//grails.plugins.springsecurity.facebook.taglib.button.img
-//***************************************************************************************
 oauth {
     debug = true
     providers {
@@ -178,12 +254,30 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'ru.homeless.model
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'ru.homeless.security.UserRole'
 grails.plugin.springsecurity.authority.className = 'ru.homeless.security.Role'
 
-//grails.plugin.springsecurity.ui.register.emailBody = '...'
-//grails.plugin.springsecurity.ui.register.emailFrom = '...'
-//grails.plugin.springsecurity.ui.register.emailSubject = '...'
-//grails.plugin.springsecurity.ui.forgotPassword.emailBody = '...'
-//grails.plugin.springsecurity.ui.forgotPassword.emailFrom = '...'
-//grails.plugin.springsecurity.ui.forgotPassword.emailSubject = '...'
+
+grails.plugin.springsecurity.ui.register.emailBody = '''\
+Здравствуйте! <br/><br/>
+Данный адрес был указан пользователем $user.username(возможно, это Вы) в качестве своего e-mail адреса для
+регистрации на сайте bezdomishi.ru.<br/><br/>
+Если Вы этого не делали или не желаете иметь аккаунт на сайте bezdomishi.ru, просто УДАЛИТЕ это письмо. <br/><br/>
+Для подтверждения адреса нажмите &nbsp;<a href="$url">ссылку</a> или скопируйте ее в окно браузера. <br/>  <br/>
+Это письмо написано роботом. Отвечать на него не нужно.<br/>
+Связаться со службой поддержки сайта bezdomishi.ru Вы можете по адресу support@bezdomishi.ru.
+'''
+grails.plugin.springsecurity.ui.register.emailFrom = 'noreply@bezdomishi.ru'
+grails.plugin.springsecurity.ui.register.emailSubject = 'Регистрация на bezdomishi.ru: подтверждение e-mail'
+
+grails.plugin.springsecurity.ui.forgotPassword.emailBody = '''\
+Здравствуйте! <br/><br/>
+На сайте bezdomishi.ru для пользователя $user.username(возможно, это Вы) был запрошен сброс пароля.<br/><br/
+Если Вы этого не делали или не желаете сбросить пароль на сайте bezdomishi.ru, просто УДАЛИТЕ это письмо. <br/><br/>
+Для сброса пароля нажмите &nbsp;<a href="$url">ссылку</a> или скопируйте ее в окно браузера. <br/>  <br/>
+Это письмо написано роботом. Отвечать на него не нужно.<br/>
+Связаться со службой поддержки сайта bezdomishi.ru Вы можете по адресу support@bezdomishi.ru.
+'''
+grails.plugin.springsecurity.ui.forgotPassword.emailFrom = 'noreply@bezdomishi.ru'
+grails.plugin.springsecurity.ui.forgotPassword.emailSubject = 'bezdomishi.ru: сброс пароля'
+
 grails.plugin.springsecurity.ui.password.minLength = 4
 grails.plugin.springsecurity.ui.password.maxLength = 64
 grails.plugin.springsecurity.ui.password.validationRegex = '^.*$'
@@ -193,8 +287,6 @@ grails.plugin.springsecurity.ui.register.postResetUrl = '/'
 
 //grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/'
 //grails.plugin.springsecurity.auth.loginFormUrl = '/'
-//"/login/$action?"(controller: "login")
-//"/logout/$action?"(controller: "logout")
 
 grails.plugin.springsecurity.securityConfigType = SecurityConfigType.InterceptUrlMap
 grails.plugin.springsecurity.interceptUrlMap = [
@@ -214,5 +306,5 @@ file.upload.directory = '/Users/ctacon/programming/tmp'
 grails.plugin.springsecurity.oauth.domainClass = 'ru.homeless.security.OAuthID'
 
 
-grails.plugin.remotepagination.max=10
-grails.plugin.remotepagination.enableBootstrap=true
+grails.plugin.remotepagination.max = 10
+grails.plugin.remotepagination.enableBootstrap = true

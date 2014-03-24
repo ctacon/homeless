@@ -35,8 +35,8 @@ class AnimalController {
         [animalInstanceList: animalList, animalInstanceTotal: Animal.count()]
     }
 
-    def forwardToAnimalList(){
-        render (view: "list_filter")
+    def forwardToAnimalList() {
+        render(view: "list_filter")
     }
 
 
@@ -45,11 +45,12 @@ class AnimalController {
     }
 
     def save() {
+        def animalInstance
         try {
             if (params.age) {
                 params.age = Date.parse('yyyyMM', params.age)
             }
-            def animalInstance = new Animal(params)
+            animalInstance = new Animal(params)
             log.info('age = ' + animalInstance.age)
 
             animalInstance.photos?.each {
@@ -64,13 +65,20 @@ class AnimalController {
             }
             PersonPost personPost = new PersonPost(person: springSecurityService.currentUser,
                     animal: animalInstance, type: PersonPostType.get(1)).save(flush: true)
-            log.info('personPost.id = ' + personPost.id)
+            if (personPost) {
+                log.info('personPost.id = ' + personPost.id)
 
 
-            flash.message = message(code: 'default.created.message', args: [message(code: 'animal.label', default: 'Animal'), animalInstance.id])
-            redirect(action: "show", id: animalInstance.id)
+                flash.message = message(code: 'default.created.message', args: [message(code: 'animal.label', default: 'Animal'), animalInstance.id])
+                redirect(action: "show", id: animalInstance.id)
+            } else {
+                log.error("fail to create person post!")
+                flash.error = 'Произошла непредвиденная ошибка при сохранении. Попробуйте еще раз.'
+                render(view: "create", model: [animalInstance: animalInstance])
+            }
         } catch (Exception ex) {
             log.error(ex, ex)
+            flash.error = 'Произошла непредвиденная ошибка при сохранении. Попробуйте еще раз.'
             render(view: "create", model: [animalInstance: animalInstance])
             return
         }
