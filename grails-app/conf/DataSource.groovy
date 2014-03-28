@@ -1,9 +1,18 @@
+//postgress
+//dataSource {
+//    pooled = true
+//    dialect = ru.homeless.hibernate.dialect.SeqDialect
+//    driverClassName = "org.postgresql.Driver"
+//    username = "postgres"
+//    password = "postgres"
+//url = "jdbc:postgresql://localhost:5432/homeless-live"
+//}
+//h2
 dataSource {
     pooled = true
-    dialect = ru.homeless.hibernate.dialect.SeqDialect
-    driverClassName = "org.postgresql.Driver"
-    username = "postgres"
-    password = "postgres"
+    driverClassName = "org.h2.Driver"
+    username = "sa"
+    password = ""
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -16,20 +25,20 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:postgresql://localhost:5432/homeless-dev"
+            //dbCreate = "" // one of 'create', 'create-drop', 'update', 'validate', ''
+            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:postgresql://localhost:5432/homeless-test"
+            //dbCreate = ""
+            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:postgresql://localhost:5432/homeless-live"
+            //dbCreate = ""
+            url = "jdbc:h2:file:/home/homeless/bd/prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
             properties {
                 maxActive = -1
                 minEvictableIdleTimeMillis = 1800000

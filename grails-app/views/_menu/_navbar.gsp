@@ -21,7 +21,7 @@
             <ul class="nav">
                 <li><a href="${createLink(controller: "Animal", action: "list")}"><g:message
                         code="menu.animal.label"/></a></li>
-                <li><a href="${createLink(controller: "home", action: 'help')}"><g:message code="menu.info.label"/></a>
+                <li><a href="${createLink(controller: "home", action: "about")}"><g:message code="menu.info.label"/></a>
                 </li>
                 <sec:ifAnyGranted roles="ROLE_ADMIN">
                     <li class="dropdown">

@@ -16,7 +16,7 @@ import org.apache.log4j.DailyRollingFileAppender
 import org.apache.log4j.PatternLayout
 
 grails.project.groupId = homeless // change this to alter the default package name and Maven publishing destination
-
+grails.app.context = "/"
 // The ACCEPT header will not be used for content negotiation for user agents containing the following strings (defaults to the 4 major rendering engines)
 grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
 grails.mime.types = [
@@ -67,10 +67,10 @@ grails {
         }
     }
     mail {
-        host = "smtp.gmail.com"
+        host = "smtp.mail.ru"
         port = 465
-        username = "ctacon183@gmail.com"
-        password = "ctac0n183"
+        username = "noreply@bezdomishi.ru"
+        password = "nfhfrfy12345"
         props = ["mail.smtp.auth": "true",
                 "mail.smtp.socketFactory.port": "465",
                 "mail.smtp.socketFactory.class": "javax.net.ssl.SSLSocketFactory",
@@ -100,11 +100,13 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-//        grails.serverURL = "http://homeless.dev:8080/${appName}"
+        grails.serverURL = "http://homeless.dev:8080"
+        file.upload.directory = '/Users/ctacon/programming/tmp/'
     }
     production {
         grails.logging.jul.usebridge = false
         grails.serverURL = "http://bezdomishi.ru"
+        file.upload.directory = '/home/homeless/user/images/'
     }
 }
 
@@ -194,19 +196,8 @@ log4j = {
             debug controller: ["grails.app.controllers"],
                     service: ["grails.app.services"],
                     domain: ["grails.app.domain"],
-                    systemOther: ["grails.app.taglib", "grails.app.filters", "grails.app.conf"],
                     system: ["grails.app"]
 
-        }
-        test {
-            root {
-                info 'system'
-            }
-            debug controller: ["grails.app.controllers"],
-                    service: ["grails.app.services"],
-                    domain: ["grails.app.domain"],
-                    systemOther: ["grails.app.taglib", "grails.app.filters", "grails.app.conf"],
-                    system: ["grails.app"]
         }
         production {
             root {
@@ -214,8 +205,7 @@ log4j = {
             }
             info controller: ["grails.app.controllers"],
                     service: ["grails.app.services"],
-                    domain: ["grails.app.domain"],
-                    systemOther: ["grails.app.taglib", "grails.app.filters", "grails.app.conf"]
+                    domain: ["grails.app.domain"]
             error system: ["grails.app"]
         }
     }
@@ -299,12 +289,17 @@ grails.plugin.springsecurity.interceptUrlMap = [
         '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
-
-file.upload.directory = '/Users/ctacon/programming/tmp'
-
 // Added by the Spring Security OAuth plugin:
 grails.plugin.springsecurity.oauth.domainClass = 'ru.homeless.security.OAuthID'
 
 
 grails.plugin.remotepagination.max = 10
 grails.plugin.remotepagination.enableBootstrap = true
+
+grails.plugin.databasemigration.updateOnStart = true
+grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
+
+
+tomcat.deploy.username="admin"
+tomcat.deploy.password="admin"
+tomcat.deploy.url="http://109.120.177.22/manager/text"

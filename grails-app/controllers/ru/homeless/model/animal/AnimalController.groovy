@@ -22,9 +22,7 @@ class AnimalController {
     }
 
     def list() {
-        [animalMinAge: 0, animalMaxAge: 240
-        ]
-
+        [animalMinAge: 0, animalMaxAge: 240]
     }
 
     def list_filter() {
@@ -169,6 +167,8 @@ class AnimalController {
         }
 
         try {
+            //animalInstance.comments?.each { it.delete(flush: true) }
+            PersonPost.findAllByAnimal(animalInstance)?.each { it.delete(flush: true) }
             animalInstance.delete(flush: true)
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'animal.label', default: 'Animal'), params.id])
             redirect(action: "list")
@@ -192,11 +192,11 @@ class AnimalController {
                     Photo picture = photoService.saveAnimalAvatar(file)
 
                     results << [
-                            avatarid: picture.id,
-                            name: picture.originalFilename,
-                            thumbnail_url: createLink(controller: 'photo', action: 'thumbnail', id: picture.id),
-                            url: createLink(controller: 'photo', action: 'picture', id: picture.id),
-                            size: picture.fileSize
+                            avatarid: picture?.id,
+                            name: picture?.originalFilename,
+                            thumbnail_url: createLink(controller: 'photo', action: 'thumbnail', id: picture?.id),
+                            url: createLink(controller: 'photo', action: 'picture', id: picture?.id),
+                            size: picture?.fileSize
                     ]
 
                 }

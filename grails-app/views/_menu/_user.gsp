@@ -3,7 +3,7 @@
         <sec:ifNotGranted roles="ROLE_USER">
             <div class="btn-group">
                 <button class="btn btn-success dropdown-toggle btn-dropdown" data-toggle="dropdown" href="#">
-                    <g:message code='security.signin.label'/>
+                    <g:message code='springSecurity.login.button'/>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -61,7 +61,7 @@
 
                     <li>
                         <g:link controller='logout' action='index'>
-                            <g:message code="security.signoff.label" default="LogOut"/>
+                            <g:message code="default.controller.label.logout" default="LogOut"/>
                         </g:link>
                     </li>
                 </ul>

@@ -5,6 +5,7 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
+grails.project.war.file = "target/${appName}.war"
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 grails.project.fork = [
@@ -20,6 +21,16 @@ grails.project.fork = [
         // configure settings for the Console UI JVM
         console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
 ]
+
+//grails{
+//    tomcat{
+//        jvmArgs = ["-server", "-XX:MaxPermSize=64m", "-XX:MaxNewSize=64m", "-XX:NewSize=64m",
+//                "-Xms128m", "-Xmx256m", "-XX:SurvivorRatio=32", "-XX:MaxTenuringThreshold=0",
+//                "-XX:+UseTLAB", "-XX:+UseConcMarkSweepGC", "-XX:+CMSClassUnloadingEnabled",
+//                "-XX:+CMSIncrementalMode", "-XX:-UseGCOverheadLimit", "-XX:+ExplicitGCInvokesConcurrent"]
+//    }
+//}
+
 
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
@@ -54,12 +65,12 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.24'
 //        compile 'org.springframework.social:spring-social-core:1.0.3.RELEASE'
         compile 'org.springframework.social:spring-social-facebook:1.0.3.RELEASE'
-
+        runtime 'org.xerial:sqlite-jdbc:3.6.17'
     }
 
     plugins {
         // plugins for the build system only
-        build ":tomcat:7.0.42"
+        build ":tomcat:7.0.52.1"
 
         // plugins for the compile step
         compile ":scaffolding:2.0.1"
@@ -83,10 +94,9 @@ grails.project.dependency.resolution = {
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.2" // or ":hibernate4:4.1.11.2"
-        runtime ":database-migration:1.3.6"
+        runtime ":database-migration:1.3.8"
         runtime ":jquery:1.10.2.2"
         runtime ":resources:1.2.1"
-       // runtime ":postgresql-extensions:0.6.7"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
